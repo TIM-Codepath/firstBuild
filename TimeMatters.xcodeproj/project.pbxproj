@@ -99,10 +99,11 @@
 		E652434D2616E5DE00270A4F /* TimeMatters */ = {
 			isa = PBXGroup;
 			children = (
-				E652434E2616E5DE00270A4F /* AppDelegate.swift */,
+				E65243812616E63A00270A4F /* Model */,
+				E65243832616E64F00270A4F /* View */,
+				E65243892616E6FD00270A4F /* Controller */,
 				E65243502616E5DE00270A4F /* SceneDelegate.swift */,
-				E65243522616E5DE00270A4F /* ViewController.swift */,
-				E65243542616E5DE00270A4F /* Main.storyboard */,
+				E652434E2616E5DE00270A4F /* AppDelegate.swift */,
 				E65243572616E5E000270A4F /* Assets.xcassets */,
 				E65243592616E5E000270A4F /* LaunchScreen.storyboard */,
 				E652435C2616E5E000270A4F /* Info.plist */,
@@ -126,6 +127,29 @@
 				E65243722616E5E100270A4F /* Info.plist */,
 			);
 			path = TimeMattersUITests;
+			sourceTree = "<group>";
+		};
+		E65243812616E63A00270A4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E65243832616E64F00270A4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E65243542616E5DE00270A4F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E65243892616E6FD00270A4F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E65243522616E5DE00270A4F /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
