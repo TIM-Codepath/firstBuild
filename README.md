@@ -1,5 +1,3 @@
-<script src="https://gist.github.com/zalwata/b1b779b5b58cc8992c3ffc96f8780326.js"></script>
-
 # firstBuildOriginal App Design Project - README
 ===
 
