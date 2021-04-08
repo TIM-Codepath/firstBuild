@@ -96,6 +96,18 @@ TIM is the destination for productive life. On TIM, daily personal time spending
 | mode   | Mode | Mode of the logging |
 | timer | Integer      | Time spending|
 
+#### Model: Record
+| Property | Type            | Description               |
+| -------- | --------        | --------                  |
+| author   | Pointer to User | User who is being tracked |
+| objectId | String      | unique ID for the user log |
+| image | file      | image that user uploaded for profile image |
+| description | String      | caption by author | 
+| startedAt | DateTime      | date when user started stopwatch | 
+| endedAt | DateTime      | date when user stopped stopwatch | 
+
+
+
 ### Networking
 
 #### Sign-In Screen
@@ -115,6 +127,10 @@ TIM is the destination for productive life. On TIM, daily personal time spending
 * GET - Get activity times to build the chart
 #### Activity Breakdown Screen
 * GET - Get activity times to build the activity
+#### [Parse] The Local Datastore
+* pinInBackground() - Once the local datastore is enabled, you can store an object by pinning it.
+#### [Parse] retrieving objects from local datastore
+* fromLocalDatastore()/getObjectInBackground() - To get the data for a specific object.
 
 ### Snippets
 #### GET - Authenticate the user
@@ -154,5 +170,25 @@ logging.saveInBackground { (success, error) in
     if success {
         print("Logging saved")
     }
+}
+```
+#### PFObject - The Local Datastore
+``` swift
+let gameScore = PFObject(className: "GameScore")
+gameScore["score"] = 1337
+gameScore["playerName"] = "AJ"
+gameScore["studyMode"] = false
+gameScore.pinInBackground()
+```
+#### PFQuery - The Local Datastore
+``` swift
+let query = PFQuery(className:"GameScore")
+query.from LocalDatastore()
+quary.getObjectInBackground(withId:"codePath").continueWith{(task:
+BFTask<PFOject>!)->Any? in
+if task.error != nil {
+return task
+}
+return task
 }
 ```
