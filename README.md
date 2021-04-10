@@ -1,6 +1,3 @@
-Original App Design Project - README
-===
-
 # TIM (Time Matters)
 
 ## Table of Contents
