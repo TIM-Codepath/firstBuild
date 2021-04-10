@@ -24,20 +24,20 @@ TIM is the destination for productive life. On TIM, daily personal time spending
 
 **Required Must-have Stories**
 
-* User can sign up to create an account
-* User logs in to access previous daily report
-* User can import/create weekly schedule 
-* User can select preset (study mode/breaktime/exercise...etc).
-* App generates daily report based on these data. (See [https://cocoapods.org/pods/Charts](https://cocoapods.org/pods/Charts))
-* Profile page for user.
-* Settings to configure app options (Accesibility, Notification, General...etc).
-* Calendar feature. (See [https://cocoapods.org/pods/JTAppleCalendar](https://cocoapods.org/pods/JTAppleCalendar))
+- [ ] User can sign up to create an account
+- [ ] User logs in to access previous daily report
+- [ ] User can import/create weekly schedule 
+- [ ] User can select preset (study mode/breaktime/exercise...etc).
+- [ ] App generates daily report based on these data. (See [https://cocoapods.org/pods/Charts](https://cocoapods.org/pods/Charts))
+- [ ] Profile page for user.
+- [ ] Settings to configure app options (Accesibility, Notification, General...etc).
+- [ ] Calendar feature. (See [https://cocoapods.org/pods/JTAppleCalendar](https://cocoapods.org/pods/JTAppleCalendar))
 
 **Optional Nice-to-have Stories**
 
-* When user uses cell phone, time is recorded.
-* Intuitive UI/UX to minimize user's interaction with app and still be able to generate accurate analysis on user's daily productivity.
-* Gamified personal statistics on each activity.
+- [ ] When user uses cell phone, time is recorded.
+- [ ] Intuitive UI/UX to minimize user's interaction with app and still be able to generate accurate analysis on user's daily productivity.
+- [ ] Gamified personal statistics on each activity.
 
 ### 2. Screen Archetypes
 
