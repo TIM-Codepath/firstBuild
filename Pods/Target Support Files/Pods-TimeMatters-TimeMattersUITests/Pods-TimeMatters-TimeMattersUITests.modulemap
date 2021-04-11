@@ -1,0 +1,6 @@
+framework module Pods_TimeMatters_TimeMattersUITests {
+  umbrella header "Pods-TimeMatters-TimeMattersUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
