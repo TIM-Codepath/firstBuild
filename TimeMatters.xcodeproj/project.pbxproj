@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6EE3FF31DD3CA073F7915499 /* Pods_TimeMattersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B8B3A68390EADD4C7863E0 /* Pods_TimeMattersTests.framework */; };
+		81721B5416A784A20236BA28 /* Pods_TimeMatters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2C35188D83F2B33D85B2BFB /* Pods_TimeMatters.framework */; };
 		E652434F2616E5DE00270A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E652434E2616E5DE00270A4F /* AppDelegate.swift */; };
 		E65243512616E5DE00270A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65243502616E5DE00270A4F /* SceneDelegate.swift */; };
 		E65243532616E5DE00270A4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65243522616E5DE00270A4F /* ViewController.swift */; };
@@ -15,6 +17,7 @@
 		E652435B2616E5E000270A4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E65243592616E5E000270A4F /* LaunchScreen.storyboard */; };
 		E65243662616E5E100270A4F /* TimeMattersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65243652616E5E100270A4F /* TimeMattersTests.swift */; };
 		E65243712616E5E100270A4F /* TimeMattersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65243702616E5E100270A4F /* TimeMattersUITests.swift */; };
+		ECBC888E715F45FA94F4FE27 /* Pods_TimeMatters_TimeMattersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ADDDA16F382220AF2FE17F4 /* Pods_TimeMatters_TimeMattersUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A747ACCA846DE66A2E7AB71 /* Pods-TimeMattersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMattersTests.debug.xcconfig"; path = "Target Support Files/Pods-TimeMattersTests/Pods-TimeMattersTests.debug.xcconfig"; sourceTree = "<group>"; };
+		41B8B3A68390EADD4C7863E0 /* Pods_TimeMattersTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeMattersTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		454437E0E4A637C1DC235CCF /* Pods-TimeMatters-TimeMattersUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMatters-TimeMattersUITests.debug.xcconfig"; path = "Target Support Files/Pods-TimeMatters-TimeMattersUITests/Pods-TimeMatters-TimeMattersUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6ADDDA16F382220AF2FE17F4 /* Pods_TimeMatters_TimeMattersUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeMatters_TimeMattersUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77FC334C3CF1355A210FDFF2 /* Pods-TimeMattersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMattersTests.release.xcconfig"; path = "Target Support Files/Pods-TimeMattersTests/Pods-TimeMattersTests.release.xcconfig"; sourceTree = "<group>"; };
+		AAEE82F6F5B1936CD09C6C36 /* Pods-TimeMatters-TimeMattersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMatters-TimeMattersUITests.release.xcconfig"; path = "Target Support Files/Pods-TimeMatters-TimeMattersUITests/Pods-TimeMatters-TimeMattersUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AEE015319122CD83F6796941 /* Pods-TimeMatters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMatters.release.xcconfig"; path = "Target Support Files/Pods-TimeMatters/Pods-TimeMatters.release.xcconfig"; sourceTree = "<group>"; };
+		C2C35188D83F2B33D85B2BFB /* Pods_TimeMatters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeMatters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2BB791ABC6084BCF0E9413B /* Pods-TimeMatters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMatters.debug.xcconfig"; path = "Target Support Files/Pods-TimeMatters/Pods-TimeMatters.debug.xcconfig"; sourceTree = "<group>"; };
 		E652434B2616E5DE00270A4F /* TimeMatters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeMatters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E652434E2616E5DE00270A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E65243502616E5DE00270A4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81721B5416A784A20236BA28 /* Pods_TimeMatters.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EE3FF31DD3CA073F7915499 /* Pods_TimeMattersTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECBC888E715F45FA94F4FE27 /* Pods_TimeMatters_TimeMattersUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B867EFF9D0E4DC71509EF2CA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D2BB791ABC6084BCF0E9413B /* Pods-TimeMatters.debug.xcconfig */,
+				AEE015319122CD83F6796941 /* Pods-TimeMatters.release.xcconfig */,
+				454437E0E4A637C1DC235CCF /* Pods-TimeMatters-TimeMattersUITests.debug.xcconfig */,
+				AAEE82F6F5B1936CD09C6C36 /* Pods-TimeMatters-TimeMattersUITests.release.xcconfig */,
+				1A747ACCA846DE66A2E7AB71 /* Pods-TimeMattersTests.debug.xcconfig */,
+				77FC334C3CF1355A210FDFF2 /* Pods-TimeMattersTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CA19F96B0E29C25181EABBAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C2C35188D83F2B33D85B2BFB /* Pods_TimeMatters.framework */,
+				6ADDDA16F382220AF2FE17F4 /* Pods_TimeMatters_TimeMattersUITests.framework */,
+				41B8B3A68390EADD4C7863E0 /* Pods_TimeMattersTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E65243422616E5DE00270A4F = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +122,8 @@
 				E65243642616E5E100270A4F /* TimeMattersTests */,
 				E652436F2616E5E100270A4F /* TimeMattersUITests */,
 				E652434C2616E5DE00270A4F /* Products */,
+				B867EFF9D0E4DC71509EF2CA /* Pods */,
+				CA19F96B0E29C25181EABBAA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,9 +200,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E65243752616E5E100270A4F /* Build configuration list for PBXNativeTarget "TimeMatters" */;
 			buildPhases = (
+				07EBD6FBD3D0BCCDC3C7878C /* [CP] Check Pods Manifest.lock */,
 				E65243472616E5DE00270A4F /* Sources */,
 				E65243482616E5DE00270A4F /* Frameworks */,
 				E65243492616E5DE00270A4F /* Resources */,
+				CC71C9627D4D628BB713688D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,6 +219,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E65243782616E5E100270A4F /* Build configuration list for PBXNativeTarget "TimeMattersTests" */;
 			buildPhases = (
+				E6633FAC79706BC433A8F14C /* [CP] Check Pods Manifest.lock */,
 				E652435D2616E5E100270A4F /* Sources */,
 				E652435E2616E5E100270A4F /* Frameworks */,
 				E652435F2616E5E100270A4F /* Resources */,
@@ -194,9 +238,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E652437B2616E5E100270A4F /* Build configuration list for PBXNativeTarget "TimeMattersUITests" */;
 			buildPhases = (
+				0C9C32EAF583C3F12A4476DF /* [CP] Check Pods Manifest.lock */,
 				E65243682616E5E100270A4F /* Sources */,
 				E65243692616E5E100270A4F /* Frameworks */,
 				E652436A2616E5E100270A4F /* Resources */,
+				E8215FF952B230729D24649C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -276,6 +322,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		07EBD6FBD3D0BCCDC3C7878C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TimeMatters-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0C9C32EAF583C3F12A4476DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TimeMatters-TimeMattersUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC71C9627D4D628BB713688D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimeMatters/Pods-TimeMatters-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimeMatters/Pods-TimeMatters-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TimeMatters/Pods-TimeMatters-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6633FAC79706BC433A8F14C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TimeMattersTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8215FF952B230729D24649C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimeMatters-TimeMattersUITests/Pods-TimeMatters-TimeMattersUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimeMatters-TimeMattersUITests/Pods-TimeMatters-TimeMattersUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TimeMatters-TimeMattersUITests/Pods-TimeMatters-TimeMattersUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E65243472616E5DE00270A4F /* Sources */ = {
@@ -457,6 +606,7 @@
 		};
 		E65243762616E5E100270A4F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2BB791ABC6084BCF0E9413B /* Pods-TimeMatters.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -475,6 +625,7 @@
 		};
 		E65243772616E5E100270A4F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEE015319122CD83F6796941 /* Pods-TimeMatters.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -493,6 +644,7 @@
 		};
 		E65243792616E5E100270A4F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1A747ACCA846DE66A2E7AB71 /* Pods-TimeMattersTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -514,6 +666,7 @@
 		};
 		E652437A2616E5E100270A4F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77FC334C3CF1355A210FDFF2 /* Pods-TimeMattersTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -535,6 +688,7 @@
 		};
 		E652437C2616E5E100270A4F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 454437E0E4A637C1DC235CCF /* Pods-TimeMatters-TimeMattersUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -554,6 +708,7 @@
 		};
 		E652437D2616E5E100270A4F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAEE82F6F5B1936CD09C6C36 /* Pods-TimeMatters-TimeMattersUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
