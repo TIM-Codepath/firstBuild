@@ -47,10 +47,16 @@
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jbv-hO-wba">
                                 <rect key="frame" x="150" y="557" width="75" height="30"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9em-nC-ipz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07h-d7-2ZI">
                                 <rect key="frame" x="150" y="612" width="75" height="30"/>
                                 <state key="normal" title="Sign In"/>
+                                <connections>
+                                    <action selector="onSignIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mvm-Cv-4a0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -86,6 +92,11 @@
                             <constraint firstItem="tCp-er-UMc" firstAttribute="top" secondItem="h4n-aN-dOB" secondAttribute="bottom" constant="10" id="zDj-PB-qpy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordField" destination="w3q-Z2-ydN" id="Y5q-EF-g8I"/>
+                        <outlet property="usernameField" destination="h4n-aN-dOB" id="xw8-sy-Em5"/>
+                        <segue destination="kGP-0a-yoR" kind="presentation" identifier="loginSeque" id="BfM-5Y-cKy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -96,7 +107,7 @@
             <objects>
                 <viewController id="KXu-C8-3aa" customClass="ProfileViewController" customModule="TimeMatters" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eNb-cL-1Eg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="qgF-l5-r6z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -113,7 +124,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kGP-0a-yoR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="KN9-IO-1lo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
