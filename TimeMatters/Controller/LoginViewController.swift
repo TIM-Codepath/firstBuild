@@ -36,12 +36,18 @@ class LoginViewController: UIViewController {
         let username = usernameField.text!
         let password = passwordField.text!
         
+        let alert = UIAlertController(title: "Wrong Password", message: "", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Try again", style: .default) { (action) in
+        }
+        
         PFUser.logInWithUsername(inBackground: username, password: password)
         { (user, error) in
             
             if user != nil {
                 self.performSegue(withIdentifier: "loginSeque", sender: nil)
             } else {
+                self.present(alert, animated: true, completion: nil)
+                alert.addAction(action)
                 print("Error: \(String(describing: error?.localizedDescription))")
             }
             
