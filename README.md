@@ -5,7 +5,7 @@
 2. [Product Spec](#Product-Spec)
 3. [Wireframes](#Wireframes)
 4. [Schema](#Schema)
-5. [Sprint2BuildProgress](#Sprint2BuildProgress)
+5. [Sprint3BuildProgress](#Sprint3BuildProgress)
 
 
 ## Overview
@@ -191,7 +191,7 @@ return task
 return task
 }
 ```
-## Sprint2BuildProgress
+## Sprint3BuildProgress
 
 ## Login
 <img src="http://g.recordit.co/CmF2A7F8re.gif" width=600>
