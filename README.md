@@ -5,7 +5,7 @@
 2. [Product Spec](#Product-Spec)
 3. [Wireframes](#Wireframes)
 4. [Schema](#Schema)
-5. [Sprint](#Sprint)
+5. [Sprint2BuildProgress](#Sprint2BuildProgress)
 
 
 ## Overview
@@ -191,4 +191,4 @@ return task
 return task
 }
 ```
-## Sprint
+## Sprint2BuildProgress
