@@ -192,3 +192,6 @@ return task
 }
 ```
 ## Sprint2BuildProgress
+
+## Login
+<img src="http://g.recordit.co/CmF2A7F8re.gif" width=600>
