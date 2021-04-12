@@ -26,8 +26,7 @@ TIM is the destination for productive life. On TIM, daily personal time spending
 
 **Required Must-have Stories**
 
-- [ ] User can sign up to create an account
-- [ ] User logs in to access previous daily report
+- [X] User logs in to access previous daily report
 - [ ] User can import/create weekly schedule 
 - [ ] User can select preset (study mode/breaktime/exercise...etc).
 - [ ] App generates daily report based on these data. (See [https://cocoapods.org/pods/Charts](https://cocoapods.org/pods/Charts))
