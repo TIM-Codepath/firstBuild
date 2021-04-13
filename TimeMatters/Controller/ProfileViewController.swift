@@ -4,7 +4,7 @@
 //
 //  Created by Aryum Jeon on 4/10/21.
 //
-
+import Parse
 import UIKit
 
 class ProfileViewController: UIViewController {
@@ -25,5 +25,22 @@ class ProfileViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    
+    @IBAction func onLogoutButton(_ sender: Any) {
+        
+        
+        PFUser.logOut()
+               
+               let main = UIStoryboard(name: "Main", bundle: nil)
+               
+               let loginViewContoller = main.instantiateViewController(withIdentifier: "LoginViewController")
+               
+               guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                     let delegate = windowScene.delegate as? SceneDelegate else {
+                   return
+               }
+               delegate.window?.rootViewController = loginViewContoller
+           }
+    
 }
