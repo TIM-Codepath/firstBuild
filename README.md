@@ -195,7 +195,7 @@ return task
 ## Login
 <img src="http://g.recordit.co/CmF2A7F8re.gif" width=600>
 
-## User stays logged in
+## User stays logged in across restarts
 ## User can logout
 ## Styled launch screen
 <img src="http://g.recordit.co/COIHDgDgH2.gif" width=600>
