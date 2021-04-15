@@ -9,9 +9,20 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    
+    @IBOutlet weak var user_name: UILabel!
+    @IBOutlet weak var user_image: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        user_name.text = PFUser.current()?.username
+        // should change the user image here
+        
+        // Make image a circle
+        user_image.layer.masksToBounds = true
+        user_image.layer.cornerRadius = user_image.bounds.width / 2
+        
         // Do any additional setup after loading the view.
     }
     
