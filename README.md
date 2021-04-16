@@ -203,3 +203,6 @@ return task
 ## User can logout
 ## Styled launch screen
 <img src="http://g.recordit.co/COIHDgDgH2.gif" width=600>
+
+## Most recent gif
+<img src="http://g.recordit.co/LLXDUr8TdC.gif" width=600>
