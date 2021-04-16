@@ -16,17 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcon" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ewy-b5-Utg">
-                                <rect key="frame" x="8" y="52" width="398" height="802"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Icon_Transparent" translatesAutoresizingMaskIntoConstraints="NO" id="vjr-Gk-82D">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="fXA-ES-xZH"/>
+                                    <constraint firstAttribute="width" constant="200" id="rvT-a3-yLZ"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ewy-b5-Utg" secondAttribute="trailing" constant="8" id="9By-mG-8Y4"/>
-                            <constraint firstItem="Ewy-b5-Utg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Jau-dn-m47"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ewy-b5-Utg" secondAttribute="bottom" constant="8" id="Oxg-yd-vIQ"/>
-                            <constraint firstItem="Ewy-b5-Utg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="lMv-TW-HvF"/>
+                            <constraint firstItem="vjr-Gk-82D" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="0Aa-0T-aNF"/>
+                            <constraint firstItem="vjr-Gk-82D" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="IKD-nU-OY0"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,7 +38,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AppIcon" width="1508" height="1475"/>
+        <image name="Icon_Transparent" width="966" height="968"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
