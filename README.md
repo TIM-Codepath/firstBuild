@@ -197,12 +197,12 @@ return task
 ## Sprint3BuildProgress
 
 ## Login
-<img src="http://g.recordit.co/CmF2A7F8re.gif" width=600>
+<img src="http://g.recordit.co/CmF2A7F8re.gif" width=300>
 
 ## User stays logged in across restarts
 ## User can logout
 ## Styled launch screen
-<img src="http://g.recordit.co/COIHDgDgH2.gif" width=600>
+<img src="http://g.recordit.co/COIHDgDgH2.gif" width=300>
 
 ## Most recent gif
-<img src="http://g.recordit.co/LLXDUr8TdC.gif" width=600>
+<img src="http://g.recordit.co/LLXDUr8TdC.gif" width=300>
