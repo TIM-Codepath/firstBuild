@@ -51,11 +51,11 @@
 		77FC334C3CF1355A210FDFF2 /* Pods-TimeMattersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMattersTests.release.xcconfig"; path = "Target Support Files/Pods-TimeMattersTests/Pods-TimeMattersTests.release.xcconfig"; sourceTree = "<group>"; };
 		AAEE82F6F5B1936CD09C6C36 /* Pods-TimeMatters-TimeMattersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMatters-TimeMattersUITests.release.xcconfig"; path = "Target Support Files/Pods-TimeMatters-TimeMattersUITests/Pods-TimeMatters-TimeMattersUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AEE015319122CD83F6796941 /* Pods-TimeMatters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMatters.release.xcconfig"; path = "Target Support Files/Pods-TimeMatters/Pods-TimeMatters.release.xcconfig"; sourceTree = "<group>"; };
-		B780C9B326286557007FB78A /* UserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVM.swift; sourceTree = SOURCE_ROOT; };
-		B780C9B826286580007FB78A /* ActivityVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityVM.swift; sourceTree = SOURCE_ROOT; };
-		B780C9BD262865DA007FB78A /* ModeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeVM.swift; sourceTree = SOURCE_ROOT; };
-		B780C9C22628660E007FB78A /* TimeLoggingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLoggingVM.swift; sourceTree = SOURCE_ROOT; };
-		B780C9C726286636007FB78A /* RecordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordVM.swift; sourceTree = SOURCE_ROOT; };
+		B780C9B326286557007FB78A /* UserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserVM.swift; path = TimeMatters/Model/UserVM.swift; sourceTree = SOURCE_ROOT; };
+		B780C9B826286580007FB78A /* ActivityVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActivityVM.swift; path = TimeMatters/Model/ActivityVM.swift; sourceTree = SOURCE_ROOT; };
+		B780C9BD262865DA007FB78A /* ModeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ModeVM.swift; path = TimeMatters/Model/ModeVM.swift; sourceTree = SOURCE_ROOT; };
+		B780C9C22628660E007FB78A /* TimeLoggingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimeLoggingVM.swift; path = TimeMatters/Model/TimeLoggingVM.swift; sourceTree = SOURCE_ROOT; };
+		B780C9C726286636007FB78A /* RecordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecordVM.swift; path = TimeMatters/Model/RecordVM.swift; sourceTree = SOURCE_ROOT; };
 		C2C35188D83F2B33D85B2BFB /* Pods_TimeMatters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeMatters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BB791ABC6084BCF0E9413B /* Pods-TimeMatters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMatters.debug.xcconfig"; path = "Target Support Files/Pods-TimeMatters/Pods-TimeMatters.debug.xcconfig"; sourceTree = "<group>"; };
 		E652434B2616E5DE00270A4F /* TimeMatters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeMatters.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +103,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B7F696B026291108009EE39A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B780C9B326286557007FB78A /* UserVM.swift */,
+				B780C9B826286580007FB78A /* ActivityVM.swift */,
+				B780C9BD262865DA007FB78A /* ModeVM.swift */,
+				B780C9C22628660E007FB78A /* TimeLoggingVM.swift */,
+				B780C9C726286636007FB78A /* RecordVM.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		B867EFF9D0E4DC71509EF2CA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,7 +163,7 @@
 		E652434D2616E5DE00270A4F /* TimeMatters */ = {
 			isa = PBXGroup;
 			children = (
-				E65243812616E63A00270A4F /* Model */,
+				B7F696B026291108009EE39A /* Model */,
 				E65243832616E64F00270A4F /* View */,
 				E65243892616E6FD00270A4F /* Controller */,
 				E65243502616E5DE00270A4F /* SceneDelegate.swift */,
@@ -179,18 +191,6 @@
 				E65243722616E5E100270A4F /* Info.plist */,
 			);
 			path = TimeMattersUITests;
-			sourceTree = "<group>";
-		};
-		E65243812616E63A00270A4F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				B780C9B326286557007FB78A /* UserVM.swift */,
-				B780C9B826286580007FB78A /* ActivityVM.swift */,
-				B780C9BD262865DA007FB78A /* ModeVM.swift */,
-				B780C9C22628660E007FB78A /* TimeLoggingVM.swift */,
-				B780C9C726286636007FB78A /* RecordVM.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		E65243832616E64F00270A4F /* View */ = {
