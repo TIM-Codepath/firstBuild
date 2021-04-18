@@ -20,6 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Code for: "User stays logged in"
         if PFUser.current() != nil {
             let main = UIStoryboard(name: "Main", bundle: nil)
+            
+//            let main = UIStoryboard(name: "AJ", bundle: nil)
+
 
             let profileNavigationController = main.instantiateViewController(withIdentifier: "ProfileNavigationController")
 

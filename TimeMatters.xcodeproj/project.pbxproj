@@ -14,6 +14,7 @@
 		B780C9BE262865DA007FB78A /* ModeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780C9BD262865DA007FB78A /* ModeVM.swift */; };
 		B780C9C32628660E007FB78A /* TimeLoggingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780C9C22628660E007FB78A /* TimeLoggingVM.swift */; };
 		B780C9C826286636007FB78A /* RecordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780C9C726286636007FB78A /* RecordVM.swift */; };
+		E645FD2D262BFDA600F63C5E /* AJ.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E645FD2C262BFDA600F63C5E /* AJ.storyboard */; };
 		E652434F2616E5DE00270A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E652434E2616E5DE00270A4F /* AppDelegate.swift */; };
 		E65243512616E5DE00270A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65243502616E5DE00270A4F /* SceneDelegate.swift */; };
 		E65243562616E5DE00270A4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E65243542616E5DE00270A4F /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		B780C9C726286636007FB78A /* RecordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecordVM.swift; path = TimeMatters/Model/RecordVM.swift; sourceTree = SOURCE_ROOT; };
 		C2C35188D83F2B33D85B2BFB /* Pods_TimeMatters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeMatters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BB791ABC6084BCF0E9413B /* Pods-TimeMatters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMatters.debug.xcconfig"; path = "Target Support Files/Pods-TimeMatters/Pods-TimeMatters.debug.xcconfig"; sourceTree = "<group>"; };
+		E645FD2C262BFDA600F63C5E /* AJ.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AJ.storyboard; sourceTree = "<group>"; };
 		E652434B2616E5DE00270A4F /* TimeMatters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeMatters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E652434E2616E5DE00270A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E65243502616E5DE00270A4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				E65243542616E5DE00270A4F /* Main.storyboard */,
+				E645FD2C262BFDA600F63C5E /* AJ.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				E652435B2616E5E000270A4F /* LaunchScreen.storyboard in Resources */,
 				E65243582616E5E000270A4F /* Assets.xcassets in Resources */,
 				E65243562616E5DE00270A4F /* Main.storyboard in Resources */,
+				E645FD2D262BFDA600F63C5E /* AJ.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
