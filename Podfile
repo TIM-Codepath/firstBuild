@@ -8,6 +8,7 @@ target 'TimeMatters' do
   # Pods for TimeMatters
   pod 'AlamofireImage'
   pod 'Parse'
+  pod 'Charts'
 
   target 'TimeMattersTests' do
     inherit! :search_paths
