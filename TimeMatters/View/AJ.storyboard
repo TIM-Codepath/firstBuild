@@ -345,8 +345,8 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wof-R3-vSD">
                                                         <rect key="frame" x="0.0" y="0.0" width="64" height="208"/>
                                                         <subviews>
-                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon_Transparent" translatesAutoresizingMaskIntoConstraints="NO" id="TgF-fn-a7Z">
-                                                                <rect key="frame" x="0.0" y="72" width="64" height="64"/>
+                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart.bar.xaxis" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="TgF-fn-a7Z">
+                                                                <rect key="frame" x="0.0" y="74.5" width="64" height="60.5"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" secondItem="TgF-fn-a7Z" secondAttribute="height" multiplier="1:1" id="Sxm-0H-vjp"/>
                                                                 </constraints>
@@ -398,6 +398,13 @@
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWd-9i-Zwq">
                                                         <rect key="frame" x="358" y="0.0" width="32" height="208"/>
                                                         <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQ8-c3-6wJ">
+                                                                <rect key="frame" x="1" y="89" width="30" height="30"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <connections>
+                                                                    <segue destination="8uv-Ai-CJ9" kind="show" id="Kup-Jx-uMi"/>
+                                                                </connections>
+                                                            </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="dso-2g-0bp">
                                                                 <rect key="frame" x="0.0" y="88" width="32" height="32"/>
                                                                 <constraints>
@@ -448,6 +455,59 @@
             </objects>
             <point key="canvasLocation" x="1710" y="123"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Xbb-K7-Cza">
+            <objects>
+                <tabBarController id="8uv-Ai-CJ9" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="qop-kx-w0J"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3yy-dO-1vy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="h8S-Fx-2EK" kind="relationship" relationship="viewControllers" id="MAf-yE-zKW"/>
+                        <segue destination="V7e-5R-7ta" kind="relationship" relationship="viewControllers" id="vxf-2a-Per"/>
+                        <segue destination="VNY-IK-ase" kind="relationship" relationship="viewControllers" id="S7w-n3-xAx"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2iv-2g-yca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2753" y="127"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="8Lr-bl-ytG">
+            <objects>
+                <navigationController id="h8S-Fx-2EK" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="hsO-GS-bNF"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Tyl-2r-Myb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3aK-Dl-AV7" kind="relationship" relationship="rootViewController" id="uh7-kp-fqn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sna-vh-jI8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2752" y="836"/>
+        </scene>
+        <!--Daily-->
+        <scene sceneID="pgQ-dM-XKf">
+            <objects>
+                <viewController id="3aK-Dl-AV7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zhf-QG-knm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="YYU-YR-9eN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Daily" id="eJl-oE-XkQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ckQ-8P-1bb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2751" y="1523"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qyh-DS-5Ya">
             <objects>
@@ -466,10 +526,77 @@
             </objects>
             <point key="canvasLocation" x="864.79999999999995" y="123.68815592203899"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="fuf-N1-AsL">
+            <objects>
+                <navigationController id="V7e-5R-7ta" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="htS-L7-QKN"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="vN1-79-jsS">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="OcG-AY-hbh" kind="relationship" relationship="rootViewController" id="HvU-wf-Qqz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yzk-YR-5xc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3517" y="836"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="2Ch-Dv-ZYh">
+            <objects>
+                <navigationController id="VNY-IK-ase" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="joM-G5-mBK"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="IOr-mn-Auy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vqj-Lv-kQp" kind="relationship" relationship="rootViewController" id="dZc-zK-1s9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Drp-5I-2i1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4262" y="836"/>
+        </scene>
+        <!--Weekly-->
+        <scene sceneID="zwl-bK-QBm">
+            <objects>
+                <viewController id="OcG-AY-hbh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KA0-db-Xgv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ldy-mN-76F"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Weekly" id="PuO-35-swP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HLw-Kf-ibb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3516" y="1523"/>
+        </scene>
+        <!--Yearly-->
+        <scene sceneID="cAz-zT-w2z">
+            <objects>
+                <viewController id="vqj-Lv-kQp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5VO-2r-8Qi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="wHQ-nc-QZS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Yearly" id="TO6-43-Lyx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V16-uh-Mn8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4261" y="1523"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Icon_Transparent" width="966" height="968"/>
         <image name="Portrait_Placeholder" width="600" height="600"/>
+        <image name="chart.bar.xaxis" catalog="system" width="128" height="98"/>
         <image name="right_arrow" width="32" height="32"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
