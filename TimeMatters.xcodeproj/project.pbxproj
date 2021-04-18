@@ -24,6 +24,9 @@
 		E65243712616E5E100270A4F /* TimeMattersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65243702616E5E100270A4F /* TimeMattersUITests.swift */; };
 		E67B5A8E2622B50B00CAB258 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67B5A8D2622B50B00CAB258 /* LoginViewController.swift */; };
 		E67B5A962622B53B00CAB258 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67B5A952622B53A00CAB258 /* ProfileViewController.swift */; };
+		E6E7F5DD262CB3BA00C9411F /* UADailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E7F5DC262CB3BA00C9411F /* UADailyViewController.swift */; };
+		E6E7F5E2262CB3E200C9411F /* UAWeeklyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E7F5E1262CB3E200C9411F /* UAWeeklyViewController.swift */; };
+		E6E7F5E7262CB3FF00C9411F /* UAYearlyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E7F5E6262CB3FF00C9411F /* UAYearlyViewController.swift */; };
 		ECBC888E715F45FA94F4FE27 /* Pods_TimeMatters_TimeMattersUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ADDDA16F382220AF2FE17F4 /* Pods_TimeMatters_TimeMattersUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +78,9 @@
 		E65243722616E5E100270A4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E67B5A8D2622B50B00CAB258 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E67B5A952622B53A00CAB258 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E6E7F5DC262CB3BA00C9411F /* UADailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UADailyViewController.swift; sourceTree = "<group>"; };
+		E6E7F5E1262CB3E200C9411F /* UAWeeklyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAWeeklyViewController.swift; sourceTree = "<group>"; };
+		E6E7F5E6262CB3FF00C9411F /* UAYearlyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAYearlyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +215,9 @@
 			children = (
 				E67B5A8D2622B50B00CAB258 /* LoginViewController.swift */,
 				E67B5A952622B53A00CAB258 /* ProfileViewController.swift */,
+				E6E7F5DC262CB3BA00C9411F /* UADailyViewController.swift */,
+				E6E7F5E1262CB3E200C9411F /* UAWeeklyViewController.swift */,
+				E6E7F5E6262CB3FF00C9411F /* UAYearlyViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -457,9 +466,12 @@
 				E652434F2616E5DE00270A4F /* AppDelegate.swift in Sources */,
 				B780C9B926286580007FB78A /* ActivityVM.swift in Sources */,
 				E67B5A962622B53B00CAB258 /* ProfileViewController.swift in Sources */,
+				E6E7F5E2262CB3E200C9411F /* UAWeeklyViewController.swift in Sources */,
 				E65243512616E5DE00270A4F /* SceneDelegate.swift in Sources */,
+				E6E7F5DD262CB3BA00C9411F /* UADailyViewController.swift in Sources */,
 				B780C9C826286636007FB78A /* RecordVM.swift in Sources */,
 				B780C9BE262865DA007FB78A /* ModeVM.swift in Sources */,
+				E6E7F5E7262CB3FF00C9411F /* UAYearlyViewController.swift in Sources */,
 				B780C9C32628660E007FB78A /* TimeLoggingVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

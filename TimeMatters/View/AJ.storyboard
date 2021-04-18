@@ -495,7 +495,7 @@
         <!--Daily-->
         <scene sceneID="pgQ-dM-XKf">
             <objects>
-                <viewController id="3aK-Dl-AV7" sceneMemberID="viewController">
+                <viewController id="3aK-Dl-AV7" customClass="UADailyViewController" customModule="TimeMatters" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zhf-QG-knm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -563,7 +563,7 @@
         <!--Weekly-->
         <scene sceneID="zwl-bK-QBm">
             <objects>
-                <viewController id="OcG-AY-hbh" sceneMemberID="viewController">
+                <viewController id="OcG-AY-hbh" customClass="UAWeeklyViewController" customModule="TimeMatters" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KA0-db-Xgv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -579,7 +579,7 @@
         <!--Yearly-->
         <scene sceneID="cAz-zT-w2z">
             <objects>
-                <viewController id="vqj-Lv-kQp" sceneMemberID="viewController">
+                <viewController id="vqj-Lv-kQp" customClass="UAYearlyViewController" customModule="TimeMatters" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5VO-2r-8Qi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
