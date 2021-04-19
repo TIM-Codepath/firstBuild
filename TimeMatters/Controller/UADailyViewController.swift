@@ -15,7 +15,6 @@ class UADailyViewController: UIViewController, ChartViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         radarChart.delegate = self
-
         // Do any additional setup after loading the view.
     }
     
@@ -27,12 +26,12 @@ class UADailyViewController: UIViewController, ChartViewDelegate {
         radarChart.center = view.center
         view.addSubview(radarChart)
         var entries = [RadarChartDataEntry]()
-        for x in 0..<10 {
+        for x in 0..<24 {
             entries.append(RadarChartDataEntry(value: Double(x), data: Double(x))
         )}
         let set = RadarChartDataSet(entries:entries)
         
-        set.colors = ChartColorTemplates.joyful()
+        set.colors = ChartColorTemplates.colorful()
         
         let data = RadarChartData(dataSet: set)
         radarChart.data = data
