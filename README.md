@@ -194,7 +194,7 @@ return task
 return task
 }
 ```
-## Sprint3BuildProgress
+## BuildProgress
 
 ## Login
 <img src="http://g.recordit.co/CmF2A7F8re.gif" width=300>
@@ -204,5 +204,5 @@ return task
 ## Styled launch screen
 <img src="http://g.recordit.co/COIHDgDgH2.gif" width=300>
 
-## Most recent gif
-<img src="http://g.recordit.co/LLXDUr8TdC.gif" width=300>
+## Radar-graph prototype
+<img src="http://g.recordit.co/6k0VH5Hzru.gif" width=300>
