@@ -6,6 +6,7 @@ PODS:
   - Charts (3.6.0):
     - Charts/Core (= 3.6.0)
   - Charts/Core (3.6.0)
+  - JTAppleCalendar (7.1.8)
   - Parse (1.19.2):
     - Parse/Core (= 1.19.2)
   - Parse/Core (1.19.2):
@@ -14,6 +15,7 @@ PODS:
 DEPENDENCIES:
   - AlamofireImage
   - Charts
+  - JTAppleCalendar (~> 7.1)
   - Parse
 
 SPEC REPOS:
@@ -22,6 +24,7 @@ SPEC REPOS:
     - AlamofireImage
     - Bolts
     - Charts
+    - JTAppleCalendar
     - Parse
 
 SPEC CHECKSUMS:
@@ -29,8 +32,9 @@ SPEC CHECKSUMS:
   AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
   Bolts: 8c1e8aab2f603387b8b9924f57d1d64f43d3ffdc
   Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  JTAppleCalendar: b7fb40852f5f319fe55c8ec3861f1de0edc99cc8
   Parse: 081fb8755c3000fd11df817eec235def233d0af3
 
-PODFILE CHECKSUM: 479d8908883be860b9d3389f1b0c1ef809bf2623
+PODFILE CHECKSUM: 69985aa4223e7bd483eb8dc2cd8e1daca3e8cae1
 
 COCOAPODS: 1.10.1
