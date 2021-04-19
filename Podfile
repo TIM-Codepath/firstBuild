@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '10.0'
 
 target 'TimeMatters' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -9,6 +9,7 @@ target 'TimeMatters' do
   pod 'AlamofireImage'
   pod 'Parse'
   pod 'Charts'
+  pod 'JTAppleCalendar', '~> 7.1'
 
   target 'TimeMattersTests' do
     inherit! :search_paths

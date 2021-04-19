@@ -675,7 +675,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1A747ACCA846DE66A2E7AB71 /* Pods-TimeMattersTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TimeMattersTests/Info.plist;
@@ -697,7 +696,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 77FC334C3CF1355A210FDFF2 /* Pods-TimeMattersTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TimeMattersTests/Info.plist;
@@ -719,7 +717,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 454437E0E4A637C1DC235CCF /* Pods-TimeMatters-TimeMattersUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TimeMattersUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -739,7 +736,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AAEE82F6F5B1936CD09C6C36 /* Pods-TimeMatters-TimeMattersUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = TimeMattersUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
