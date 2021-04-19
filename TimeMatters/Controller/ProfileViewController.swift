@@ -43,8 +43,8 @@ class ProfileViewController: UIViewController {
         
         PFUser.logOut()
                
-//               let main = UIStoryboard(name: "Main", bundle: nil)
-        let main = UIStoryboard(name: "AJ", bundle: nil)
+               let main = UIStoryboard(name: "Main", bundle: nil)
+//        let main = UIStoryboard(name: "AJ", bundle: nil)
 
                
                let loginViewContoller = main.instantiateViewController(withIdentifier: "LoginViewController")
