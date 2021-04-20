@@ -461,7 +461,7 @@
         <!--Edit Profile-->
         <scene sceneID="q5d-cj-xnE">
             <objects>
-                <viewController id="ScY-LF-t1r" sceneMemberID="viewController">
+                <viewController id="ScY-LF-t1r" customClass="EditProfileViewController" customModule="TimeMatters" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4iy-nN-6hE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -481,6 +481,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Change Profile Photo"/>
+                                <connections>
+                                    <action selector="onChangeProfilePhotoButton:" destination="ScY-LF-t1r" eventType="touchUpInside" id="rjQ-GZ-CSI"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crZ-C8-LJ0">
                                 <rect key="frame" x="37" y="301" width="45" height="21"/>
@@ -520,12 +523,21 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Profile" id="chv-tK-Fg9">
-                        <barButtonItem key="rightBarButtonItem" title="Done" id="jde-a4-ga5"/>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="jde-a4-ga5">
+                            <connections>
+                                <action selector="onDoneButtonClick:" destination="ScY-LF-t1r" id="Nln-FM-UhP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="bioInfo" destination="R0l-p2-ZM1" id="6IT-s5-hTX"/>
+                        <outlet property="name" destination="Bzw-m1-oJo" id="4L1-qv-aq2"/>
+                        <outlet property="username" destination="nje-xO-d2Y" id="Trd-Ub-a3U"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kat-u5-fgd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2305.7971014492755" y="-528.34821428571422"/>
+            <point key="canvasLocation" x="1709" y="836"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Xbb-K7-Cza">
