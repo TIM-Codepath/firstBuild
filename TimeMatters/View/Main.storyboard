@@ -475,11 +475,11 @@
             </objects>
             <point key="canvasLocation" x="2753" y="127"/>
         </scene>
-        <!--Item-->
+        <!--Daily-->
         <scene sceneID="8Lr-bl-ytG">
             <objects>
                 <navigationController id="h8S-Fx-2EK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="hsO-GS-bNF"/>
+                    <tabBarItem key="tabBarItem" title="Daily" id="hsO-GS-bNF"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Tyl-2r-Myb">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -526,11 +526,11 @@
             </objects>
             <point key="canvasLocation" x="864.79999999999995" y="123.68815592203899"/>
         </scene>
-        <!--Item-->
+        <!--Weekly-->
         <scene sceneID="fuf-N1-AsL">
             <objects>
                 <navigationController id="V7e-5R-7ta" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="htS-L7-QKN"/>
+                    <tabBarItem key="tabBarItem" title="Weekly" id="htS-L7-QKN"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="vN1-79-jsS">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -543,11 +543,11 @@
             </objects>
             <point key="canvasLocation" x="3517" y="836"/>
         </scene>
-        <!--Item-->
+        <!--Yearly-->
         <scene sceneID="2Ch-Dv-ZYh">
             <objects>
                 <navigationController id="VNY-IK-ase" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="joM-G5-mBK"/>
+                    <tabBarItem key="tabBarItem" title="Yearly" id="joM-G5-mBK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="IOr-mn-Auy">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
