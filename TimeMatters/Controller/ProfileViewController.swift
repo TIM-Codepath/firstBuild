@@ -12,6 +12,9 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet weak var user_name: UILabel!
     @IBOutlet weak var user_image: UIImageView!
+    @IBOutlet weak var timeLoggingView: UIStackView!
+    @IBOutlet weak var productivityView: UIStackView!
+    @IBOutlet weak var userAttributesView: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,20 +26,28 @@ class ProfileViewController: UIViewController {
         user_image.layer.masksToBounds = true
         user_image.layer.cornerRadius = user_image.bounds.width / 2
         
-        // Do any additional setup after loading the view.
+        initViews()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func initViews() {
+        let productivityGesture = UITapGestureRecognizer(target: self, action: #selector(self.productibityTab(_:)))
+        productivityView.addGestureRecognizer(productivityGesture)
+        
+        let userAttributesGesture = UITapGestureRecognizer(target: self, action: #selector(self.userAttributesTab(_:)))
+        userAttributesView.addGestureRecognizer(userAttributesGesture)
     }
-    */
     
+    @objc func productibityTab(_ sender: UITapGestureRecognizer? = nil) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "ProductivityStoryboard", bundle:nil)
+        let view  = storyboard.instantiateViewController(withIdentifier: "calendarView") as! CalendarViewController
+        self.navigationController?.pushViewController(view, animated: true)
+    }
+    
+    @objc func userAttributesTab(_ sender: UITapGestureRecognizer? = nil) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "UserAttributesStoryboard", bundle:nil)
+        let view  = storyboard.instantiateViewController(withIdentifier: "tabBarControl") as! UITabBarController
+        self.navigationController?.pushViewController(view, animated: true)
+    }
     
     @IBAction func onLogoutButton(_ sender: Any) {
         

@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -127,64 +126,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="63.768115942028992" y="123.21428571428571"/>
-        </scene>
-        <!--CalendarViewController-->
-        <scene sceneID="aoV-ap-Cns">
-            <objects>
-                <viewController title="CalendarViewController" id="Tjb-pc-LGR" customClass="CalendarViewController" customModule="TimeMatters" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="jKD-gS-ODV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="y4f-h1-xiV">
-                                <rect key="frame" x="0.0" y="88" width="414" height="361"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="361" id="m4q-B6-bLr"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Q6y-9H-1ch">
-                                    <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalendarViewCell" id="KkT-ij-7TX">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="j58-oc-kBU">
-                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZnE-o0-2IZ">
-                                                    <rect key="frame" x="43" y="53.5" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="ZnE-o0-2IZ" firstAttribute="centerY" secondItem="j58-oc-kBU" secondAttribute="centerY" id="2Jg-dj-Yf5"/>
-                                                <constraint firstItem="ZnE-o0-2IZ" firstAttribute="centerX" secondItem="j58-oc-kBU" secondAttribute="centerX" id="4VJ-Gj-fga"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="mBu-5U-doK"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="y4f-h1-xiV" firstAttribute="top" secondItem="mBu-5U-doK" secondAttribute="top" id="6Kx-ak-eTl"/>
-                            <constraint firstItem="y4f-h1-xiV" firstAttribute="leading" secondItem="mBu-5U-doK" secondAttribute="leading" id="NgT-QE-RYq"/>
-                            <constraint firstItem="y4f-h1-xiV" firstAttribute="trailing" secondItem="mBu-5U-doK" secondAttribute="trailing" id="bL6-Vv-1VD"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Calendar" id="jdS-AB-FrQ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wz3-sM-Arm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2285.507246376812" y="-539.0625"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="QMt-0L-gJv">
@@ -386,9 +327,6 @@
                                                                 <rect key="frame" x="0.0" y="90" width="32" height="32"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <state key="normal" image="right_arrow"/>
-                                                                <connections>
-                                                                    <segue destination="Tjb-pc-LGR" kind="show" id="qLW-Am-TOZ"/>
-                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -460,9 +398,6 @@
                                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="WQ8-c3-6wJ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="200"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                <connections>
-                                                                    <segue destination="8uv-Ai-CJ9" kind="show" id="Kup-Jx-uMi"/>
-                                                                </connections>
                                                             </button>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right_arrow" translatesAutoresizingMaskIntoConstraints="NO" id="dso-2g-0bp">
                                                                 <rect key="frame" x="0.0" y="88" width="32" height="32"/>
@@ -506,6 +441,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="productivityView" destination="elh-4n-rmv" id="Hyn-aH-Fxh"/>
+                        <outlet property="timeLoggingView" destination="fP1-d8-Ra9" id="hdN-r8-hQ1"/>
+                        <outlet property="userAttributesView" destination="pNd-1E-43t" id="xJQ-xW-rwf"/>
                         <outlet property="user_image" destination="tqr-Ue-2GB" id="QFD-Cm-KlQ"/>
                         <outlet property="user_name" destination="RJq-hs-kTq" id="aUs-89-ltO"/>
                     </connections>
@@ -595,59 +533,6 @@
             </objects>
             <point key="canvasLocation" x="1709" y="836"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="Xbb-K7-Cza">
-            <objects>
-                <tabBarController id="8uv-Ai-CJ9" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="qop-kx-w0J"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3yy-dO-1vy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="h8S-Fx-2EK" kind="relationship" relationship="viewControllers" id="MAf-yE-zKW"/>
-                        <segue destination="V7e-5R-7ta" kind="relationship" relationship="viewControllers" id="vxf-2a-Per"/>
-                        <segue destination="VNY-IK-ase" kind="relationship" relationship="viewControllers" id="S7w-n3-xAx"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2iv-2g-yca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2753" y="127"/>
-        </scene>
-        <!--Daily-->
-        <scene sceneID="8Lr-bl-ytG">
-            <objects>
-                <navigationController id="h8S-Fx-2EK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Daily" id="hsO-GS-bNF"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Tyl-2r-Myb">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="3aK-Dl-AV7" kind="relationship" relationship="rootViewController" id="uh7-kp-fqn"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="sna-vh-jI8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2752" y="836"/>
-        </scene>
-        <!--Daily-->
-        <scene sceneID="pgQ-dM-XKf">
-            <objects>
-                <viewController id="3aK-Dl-AV7" customClass="UADailyViewController" customModule="TimeMatters" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Zhf-QG-knm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="YYU-YR-9eN"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Daily" id="eJl-oE-XkQ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ckQ-8P-1bb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2751" y="1523"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qyh-DS-5Ya">
             <objects>
@@ -665,72 +550,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aai-Hx-Dnb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="864.79999999999995" y="123.68815592203899"/>
-        </scene>
-        <!--Weekly-->
-        <scene sceneID="fuf-N1-AsL">
-            <objects>
-                <navigationController id="V7e-5R-7ta" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Weekly" id="htS-L7-QKN"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="vN1-79-jsS">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="OcG-AY-hbh" kind="relationship" relationship="rootViewController" id="HvU-wf-Qqz"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yzk-YR-5xc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3517" y="836"/>
-        </scene>
-        <!--Yearly-->
-        <scene sceneID="2Ch-Dv-ZYh">
-            <objects>
-                <navigationController id="VNY-IK-ase" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Yearly" id="joM-G5-mBK"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="IOr-mn-Auy">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="vqj-Lv-kQp" kind="relationship" relationship="rootViewController" id="dZc-zK-1s9"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Drp-5I-2i1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4262" y="836"/>
-        </scene>
-        <!--Weekly-->
-        <scene sceneID="zwl-bK-QBm">
-            <objects>
-                <viewController id="OcG-AY-hbh" customClass="UAWeeklyViewController" customModule="TimeMatters" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KA0-db-Xgv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Ldy-mN-76F"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Weekly" id="PuO-35-swP"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HLw-Kf-ibb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3516" y="1523"/>
-        </scene>
-        <!--Yearly-->
-        <scene sceneID="cAz-zT-w2z">
-            <objects>
-                <viewController id="vqj-Lv-kQp" customClass="UAYearlyViewController" customModule="TimeMatters" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5VO-2r-8Qi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="wHQ-nc-QZS"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Yearly" id="TO6-43-Lyx"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="V16-uh-Mn8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4261" y="1523"/>
         </scene>
     </scenes>
     <resources>
