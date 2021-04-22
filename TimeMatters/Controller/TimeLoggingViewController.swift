@@ -32,6 +32,7 @@ class TimeLoggingViewController: UIViewController {
     func initBarButton() {
         let button = UIButton(type: .system)
         button.setTitle("Add Preset", for: .normal)
+        button.titleLabel?.font = button.titleLabel?.font.withSize(17)
         button.addTarget(self, action: #selector(clickAddPreset), for: .touchUpInside)
         self.navigationItem.setRightBarButton(UIBarButtonItem(customView: button), animated: true)
     }
