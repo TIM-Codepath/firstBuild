@@ -54,14 +54,25 @@ class ProfileViewController: UIViewController {
     }
     
     func initViews() {
-        let productivityGesture = UITapGestureRecognizer(target: self, action: #selector(self.productibityTab(_:)))
+        let timeLoggingGesture = UITapGestureRecognizer(target: self, action: #selector(self.timeLoggingTab(_:)))
+        timeLoggingView.addGestureRecognizer(timeLoggingGesture)
+        
+        let productivityGesture = UITapGestureRecognizer(target: self, action: #selector(self.productivityTab(_:)))
         productivityView.addGestureRecognizer(productivityGesture)
         
         let userAttributesGesture = UITapGestureRecognizer(target: self, action: #selector(self.userAttributesTab(_:)))
         userAttributesView.addGestureRecognizer(userAttributesGesture)
     }
     
-    @objc func productibityTab(_ sender: UITapGestureRecognizer? = nil) {
+    @objc func timeLoggingTab(_ sender: UITapGestureRecognizer? = nil) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "TimeLoggingStoryboard", bundle:nil)
+        let view  = storyboard.instantiateViewController(withIdentifier: "navigationControl") as! UINavigationController
+        // Commented the line below because I want to be able to dismiss by dragging down for now.
+//        view.modalPresentationStyle = .fullScreen
+        self.navigationController?.present(view, animated: true)
+    }
+    
+    @objc func productivityTab(_ sender: UITapGestureRecognizer? = nil) {
         let storyboard: UIStoryboard = UIStoryboard(name: "ProductivityStoryboard", bundle:nil)
         let view  = storyboard.instantiateViewController(withIdentifier: "calendarView") as! CalendarViewController
         self.navigationController?.pushViewController(view, animated: true)

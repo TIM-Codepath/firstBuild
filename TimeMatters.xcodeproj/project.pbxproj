@@ -19,6 +19,8 @@
 		B7A12F3226310445006AB227 /* ProductivityStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A12F3126310445006AB227 /* ProductivityStoryboard.storyboard */; };
 		B7A12F37263107D9006AB227 /* UserAttributesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A12F36263107D9006AB227 /* UserAttributesStoryboard.storyboard */; };
 		B7A12F3C26311705006AB227 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A12F3B26311705006AB227 /* SignUpViewController.swift */; };
+		D701D71F26311BDD00A77131 /* TimeLoggingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D701D71E26311BDD00A77131 /* TimeLoggingStoryboard.storyboard */; };
+		D701D72426311FC600A77131 /* TimeLoggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D701D72326311FC600A77131 /* TimeLoggingViewController.swift */; };
 		E645FD2D262BFDA600F63C5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E645FD2C262BFDA600F63C5E /* Main.storyboard */; };
 		E652434F2616E5DE00270A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E652434E2616E5DE00270A4F /* AppDelegate.swift */; };
 		E65243512616E5DE00270A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65243502616E5DE00270A4F /* SceneDelegate.swift */; };
@@ -71,6 +73,8 @@
 		B7A12F3B26311705006AB227 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C2C35188D83F2B33D85B2BFB /* Pods_TimeMatters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeMatters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BB791ABC6084BCF0E9413B /* Pods-TimeMatters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMatters.debug.xcconfig"; path = "Target Support Files/Pods-TimeMatters/Pods-TimeMatters.debug.xcconfig"; sourceTree = "<group>"; };
+		D701D71E26311BDD00A77131 /* TimeLoggingStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeLoggingStoryboard.storyboard; sourceTree = "<group>"; };
+		D701D72326311FC600A77131 /* TimeLoggingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLoggingViewController.swift; sourceTree = "<group>"; };
 		E645FD2C262BFDA600F63C5E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E652434B2616E5DE00270A4F /* TimeMatters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeMatters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E652434E2616E5DE00270A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -187,8 +191,6 @@
 				E65243572616E5E000270A4F /* Assets.xcassets */,
 				E65243592616E5E000270A4F /* LaunchScreen.storyboard */,
 				E652435C2616E5E000270A4F /* Info.plist */,
-				0FD390DB262E6C9C008C2CBC /* EditProfileViewController.swift */,
-				0FD14873262F763800641420 /* CalendarViewController.swift */,
 			);
 			path = TimeMatters;
 			sourceTree = "<group>";
@@ -217,6 +219,7 @@
 				E645FD2C262BFDA600F63C5E /* Main.storyboard */,
 				B7A12F3126310445006AB227 /* ProductivityStoryboard.storyboard */,
 				B7A12F36263107D9006AB227 /* UserAttributesStoryboard.storyboard */,
+				D701D71E26311BDD00A77131 /* TimeLoggingStoryboard.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -226,10 +229,13 @@
 			children = (
 				E67B5A8D2622B50B00CAB258 /* LoginViewController.swift */,
 				E67B5A952622B53A00CAB258 /* ProfileViewController.swift */,
+				0FD390DB262E6C9C008C2CBC /* EditProfileViewController.swift */,
 				E6E7F5DC262CB3BA00C9411F /* UADailyViewController.swift */,
 				E6E7F5E1262CB3E200C9411F /* UAWeeklyViewController.swift */,
 				E6E7F5E6262CB3FF00C9411F /* UAYearlyViewController.swift */,
 				B7A12F3B26311705006AB227 /* SignUpViewController.swift */,
+				0FD14873262F763800641420 /* CalendarViewController.swift */,
+				D701D72326311FC600A77131 /* TimeLoggingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -346,6 +352,7 @@
 				B7A12F3226310445006AB227 /* ProductivityStoryboard.storyboard in Resources */,
 				E65243582616E5E000270A4F /* Assets.xcassets in Resources */,
 				B7A12F37263107D9006AB227 /* UserAttributesStoryboard.storyboard in Resources */,
+				D701D71F26311BDD00A77131 /* TimeLoggingStoryboard.storyboard in Resources */,
 				E645FD2D262BFDA600F63C5E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -488,6 +495,7 @@
 				B780C9BE262865DA007FB78A /* ModeVM.swift in Sources */,
 				E6E7F5E7262CB3FF00C9411F /* UAYearlyViewController.swift in Sources */,
 				0FD14874262F763800641420 /* CalendarViewController.swift in Sources */,
+				D701D72426311FC600A77131 /* TimeLoggingViewController.swift in Sources */,
 				B780C9C32628660E007FB78A /* TimeLoggingVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
