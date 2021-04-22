@@ -16,6 +16,8 @@
 		B780C9BE262865DA007FB78A /* ModeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780C9BD262865DA007FB78A /* ModeVM.swift */; };
 		B780C9C32628660E007FB78A /* TimeLoggingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780C9C22628660E007FB78A /* TimeLoggingVM.swift */; };
 		B780C9C826286636007FB78A /* RecordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780C9C726286636007FB78A /* RecordVM.swift */; };
+		B7A12F3226310445006AB227 /* ProductivityStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A12F3126310445006AB227 /* ProductivityStoryboard.storyboard */; };
+		B7A12F37263107D9006AB227 /* UserAttributesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A12F36263107D9006AB227 /* UserAttributesStoryboard.storyboard */; };
 		E645FD2D262BFDA600F63C5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E645FD2C262BFDA600F63C5E /* Main.storyboard */; };
 		E652434F2616E5DE00270A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E652434E2616E5DE00270A4F /* AppDelegate.swift */; };
 		E65243512616E5DE00270A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65243502616E5DE00270A4F /* SceneDelegate.swift */; };
@@ -63,6 +65,8 @@
 		B780C9BD262865DA007FB78A /* ModeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ModeVM.swift; path = TimeMatters/Model/ModeVM.swift; sourceTree = SOURCE_ROOT; };
 		B780C9C22628660E007FB78A /* TimeLoggingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TimeLoggingVM.swift; path = TimeMatters/Model/TimeLoggingVM.swift; sourceTree = SOURCE_ROOT; };
 		B780C9C726286636007FB78A /* RecordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecordVM.swift; path = TimeMatters/Model/RecordVM.swift; sourceTree = SOURCE_ROOT; };
+		B7A12F3126310445006AB227 /* ProductivityStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductivityStoryboard.storyboard; sourceTree = "<group>"; };
+		B7A12F36263107D9006AB227 /* UserAttributesStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserAttributesStoryboard.storyboard; sourceTree = "<group>"; };
 		C2C35188D83F2B33D85B2BFB /* Pods_TimeMatters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeMatters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BB791ABC6084BCF0E9413B /* Pods-TimeMatters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMatters.debug.xcconfig"; path = "Target Support Files/Pods-TimeMatters/Pods-TimeMatters.debug.xcconfig"; sourceTree = "<group>"; };
 		E645FD2C262BFDA600F63C5E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -209,6 +213,8 @@
 			isa = PBXGroup;
 			children = (
 				E645FD2C262BFDA600F63C5E /* Main.storyboard */,
+				B7A12F3126310445006AB227 /* ProductivityStoryboard.storyboard */,
+				B7A12F36263107D9006AB227 /* UserAttributesStoryboard.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -334,7 +340,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E652435B2616E5E000270A4F /* LaunchScreen.storyboard in Resources */,
+				B7A12F3226310445006AB227 /* ProductivityStoryboard.storyboard in Resources */,
 				E65243582616E5E000270A4F /* Assets.xcassets in Resources */,
+				B7A12F37263107D9006AB227 /* UserAttributesStoryboard.storyboard in Resources */,
 				E645FD2D262BFDA600F63C5E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
