@@ -11,13 +11,13 @@
         <!--Time Logging View Controller-->
         <scene sceneID="1eR-Tj-bTe">
             <objects>
-                <viewController id="MeQ-MA-lM9" customClass="TimeLoggingViewController" customModule="TimeMatters" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="timeLoggingViewController" id="MeQ-MA-lM9" customClass="TimeLoggingViewController" customModule="TimeMatters" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wwp-gq-1dp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="Q5v-m0-hZX">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z4r-PH-awH">
                                         <rect key="frame" x="87" y="0.0" width="240" height="0.0"/>
@@ -78,34 +78,34 @@
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cTY-QG-eyY">
-                                        <rect key="frame" x="73" y="312.5" width="268" height="161.5"/>
+                                        <rect key="frame" x="73" y="312.5" width="268" height="205.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLf-Au-aQ5">
-                                                <rect key="frame" x="17.5" y="51.5" width="60.5" height="58.5"/>
+                                                <rect key="frame" x="17.5" y="73.5" width="60.5" height="58.5"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="50"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZP-eZ-BlZ">
-                                                <rect key="frame" x="104" y="51.5" width="60.5" height="58.5"/>
+                                                <rect key="frame" x="104" y="73.5" width="60.5" height="58.5"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="50"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMj-sa-IzA">
-                                                <rect key="frame" x="190.5" y="51.5" width="60.5" height="58.5"/>
+                                                <rect key="frame" x="190.5" y="73.5" width="60.5" height="58.5"/>
                                                 <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="50"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="asK-X8-eLH">
-                                                <rect key="frame" x="172.5" y="57" width="10" height="48"/>
+                                                <rect key="frame" x="172.5" y="79" width="10" height="48"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y3j-FM-En8">
-                                                <rect key="frame" x="86" y="57" width="10" height="48"/>
+                                                <rect key="frame" x="86" y="79" width="10" height="48"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -126,7 +126,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Tp-2q-fIy">
-                                        <rect key="frame" x="157" y="574" width="100" height="100"/>
+                                        <rect key="frame" x="157" y="618" width="100" height="100"/>
                                         <color key="backgroundColor" red="0.0078431372549019607" green="0.71372549019607845" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="wLs-ht-8Pz"/>
@@ -141,7 +141,7 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Mx-Jx-Jy0">
-                                        <rect key="frame" x="87" y="774" width="240" height="0.0"/>
+                                        <rect key="frame" x="87" y="818" width="240" height="0.0"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" id="2T2-2H-ltR"/>
@@ -160,9 +160,6 @@
                             <constraint firstItem="6ds-xp-b7n" firstAttribute="bottom" secondItem="Q5v-m0-hZX" secondAttribute="bottom" id="rWD-YR-mBD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Iaf-6n-aYx">
-                        <barButtonItem key="rightBarButtonItem" title="Add Preset" id="N0W-U7-2vw"/>
-                    </navigationItem>
                     <connections>
                         <outlet property="hourLabel" destination="eLf-Au-aQ5" id="gNO-qK-dBX"/>
                         <outlet property="minuteLabel" destination="vZP-eZ-BlZ" id="NcF-bJ-JZ5"/>
@@ -173,24 +170,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ew1-8h-B7O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1086.9565217391305" y="170.75892857142856"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="gLP-fh-LG2">
-            <objects>
-                <navigationController storyboardIdentifier="navigationControl" automaticallyAdjustsScrollViewInsets="NO" id="ugw-Ch-WHl" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aht-Xa-OMH">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="MeQ-MA-lM9" kind="relationship" relationship="rootViewController" id="fZ5-R5-LfM"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mac-8T-9tQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="176.81159420289856" y="170.75892857142856"/>
         </scene>
     </scenes>
     <resources>

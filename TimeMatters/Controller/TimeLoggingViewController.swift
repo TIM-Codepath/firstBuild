@@ -25,7 +25,19 @@ class TimeLoggingViewController: UIViewController {
         
         startStopBtn.layer.masksToBounds = true
         startStopBtn.layer.cornerRadius = startStopBtn.bounds.width / 2
-        // Do any additional setup after loading the view.
+        
+        initBarButton()
+    }
+    
+    func initBarButton() {
+        let button = UIButton(type: .system)
+        button.setTitle("Add Preset", for: .normal)
+        button.addTarget(self, action: #selector(clickAddPreset), for: .touchUpInside)
+        self.navigationItem.setRightBarButton(UIBarButtonItem(customView: button), animated: true)
+    }
+    
+    @objc func clickAddPreset() {
+        print("clicked")
     }
     
     @IBAction func onStartStop(_ sender: Any) {

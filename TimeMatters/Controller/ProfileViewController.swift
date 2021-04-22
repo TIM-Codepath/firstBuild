@@ -66,10 +66,8 @@ class ProfileViewController: UIViewController {
     
     @objc func timeLoggingTab(_ sender: UITapGestureRecognizer? = nil) {
         let storyboard: UIStoryboard = UIStoryboard(name: "TimeLoggingStoryboard", bundle:nil)
-        let view  = storyboard.instantiateViewController(withIdentifier: "navigationControl") as! UINavigationController
-        // Commented the line below because I want to be able to dismiss by dragging down for now.
-//        view.modalPresentationStyle = .fullScreen
-        self.navigationController?.present(view, animated: true)
+        let view  = storyboard.instantiateViewController(withIdentifier: "timeLoggingViewController") as! TimeLoggingViewController
+        self.navigationController?.pushViewController(view, animated: true)
     }
     
     @objc func productivityTab(_ sender: UITapGestureRecognizer? = nil) {
