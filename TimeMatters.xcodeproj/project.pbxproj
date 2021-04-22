@@ -18,6 +18,7 @@
 		B780C9C826286636007FB78A /* RecordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780C9C726286636007FB78A /* RecordVM.swift */; };
 		B7A12F3226310445006AB227 /* ProductivityStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A12F3126310445006AB227 /* ProductivityStoryboard.storyboard */; };
 		B7A12F37263107D9006AB227 /* UserAttributesStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A12F36263107D9006AB227 /* UserAttributesStoryboard.storyboard */; };
+		B7A12F3C26311705006AB227 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A12F3B26311705006AB227 /* SignUpViewController.swift */; };
 		E645FD2D262BFDA600F63C5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E645FD2C262BFDA600F63C5E /* Main.storyboard */; };
 		E652434F2616E5DE00270A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E652434E2616E5DE00270A4F /* AppDelegate.swift */; };
 		E65243512616E5DE00270A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65243502616E5DE00270A4F /* SceneDelegate.swift */; };
@@ -67,6 +68,7 @@
 		B780C9C726286636007FB78A /* RecordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecordVM.swift; path = TimeMatters/Model/RecordVM.swift; sourceTree = SOURCE_ROOT; };
 		B7A12F3126310445006AB227 /* ProductivityStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductivityStoryboard.storyboard; sourceTree = "<group>"; };
 		B7A12F36263107D9006AB227 /* UserAttributesStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserAttributesStoryboard.storyboard; sourceTree = "<group>"; };
+		B7A12F3B26311705006AB227 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C2C35188D83F2B33D85B2BFB /* Pods_TimeMatters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeMatters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2BB791ABC6084BCF0E9413B /* Pods-TimeMatters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMatters.debug.xcconfig"; path = "Target Support Files/Pods-TimeMatters/Pods-TimeMatters.debug.xcconfig"; sourceTree = "<group>"; };
 		E645FD2C262BFDA600F63C5E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 				E6E7F5DC262CB3BA00C9411F /* UADailyViewController.swift */,
 				E6E7F5E1262CB3E200C9411F /* UAWeeklyViewController.swift */,
 				E6E7F5E6262CB3FF00C9411F /* UAYearlyViewController.swift */,
+				B7A12F3B26311705006AB227 /* SignUpViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -480,6 +483,7 @@
 				E6E7F5E2262CB3E200C9411F /* UAWeeklyViewController.swift in Sources */,
 				E65243512616E5DE00270A4F /* SceneDelegate.swift in Sources */,
 				E6E7F5DD262CB3BA00C9411F /* UADailyViewController.swift in Sources */,
+				B7A12F3C26311705006AB227 /* SignUpViewController.swift in Sources */,
 				B780C9C826286636007FB78A /* RecordVM.swift in Sources */,
 				B780C9BE262865DA007FB78A /* ModeVM.swift in Sources */,
 				E6E7F5E7262CB3FF00C9411F /* UAYearlyViewController.swift in Sources */,

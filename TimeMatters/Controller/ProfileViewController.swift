@@ -11,6 +11,7 @@ class ProfileViewController: UIViewController {
 
     
     @IBOutlet weak var user_name: UILabel!
+    @IBOutlet weak var bioLabel: UILabel!
     @IBOutlet weak var user_image: UIImageView!
     @IBOutlet weak var timeLoggingView: UIStackView!
     @IBOutlet weak var productivityView: UIStackView!
@@ -18,15 +19,38 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        user_name.text = PFUser.current()?.username
-        // should change the user image here
         
         // Make image a circle
         user_image.layer.masksToBounds = true
         user_image.layer.cornerRadius = user_image.bounds.width / 2
         
         initViews()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        initModel()
+    }
+    
+    func initModel() {
+        let user = PFUser.current()
+        
+        if let name = user?["name"] as? String {
+            user_name.text = name
+        } else {
+            user_name.text = user?.username
+        }
+        
+        if let bio = user?["bio"] as? String {
+            bioLabel.text = bio
+        } else {
+            bioLabel.text = ""
+        }
+        
+        if let imageFile = user?["profile_photo"] as? PFFileObject {
+            let urlString = imageFile.url!
+            let url = URL(string: urlString)!
+            user_image.af.setImage(withURL: url)
+        }
     }
     
     func initViews() {
