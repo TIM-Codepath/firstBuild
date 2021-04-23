@@ -206,3 +206,7 @@ return task
 
 ## Radar-graph prototype
 <img src="http://g.recordit.co/6k0VH5Hzru.gif" width=300>
+
+## Modified UI
+## Edit Profile View Controller
+<img src="http://g.recordit.co/4j6cqOp9UR.gif" width=300>
