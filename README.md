@@ -5,7 +5,7 @@
 2. [Product Spec](#Product-Spec)
 3. [Wireframes](#Wireframes)
 4. [Schema](#Schema)
-5. [Sprint3BuildProgress](#BuildProgress)
+5. [BuildProgress](#BuildProgress)
 
 
 ## Overview
