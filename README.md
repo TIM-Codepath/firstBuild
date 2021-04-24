@@ -34,7 +34,7 @@ TIM is the destination for productive life. On TIM, daily personal time spending
 - [ ] User can import/create weekly schedule 
 - [ ] User can select preset (study mode/breaktime/exercise...etc).
 - [ ] App generates daily report based on these data. (See [https://cocoapods.org/pods/Charts](https://cocoapods.org/pods/Charts))
-- [ ] Profile page for user.
+- [X] Profile page for user.
 - [ ] Settings to configure app options (Accesibility, Notification, General...etc).
 - [ ] Calendar feature. (See [https://cocoapods.org/pods/JTAppleCalendar](https://cocoapods.org/pods/JTAppleCalendar))
 
