@@ -210,3 +210,7 @@ return task
 ## Modified UI
 ## Edit Profile View Controller
 <img src="http://g.recordit.co/4j6cqOp9UR.gif" width=300>
+## Modified UI
+## User can change profile photo, name and bio
+## Time logging feature
+<img src="http://g.recordit.co/q9ALh5DCYK.gif" width=300>
