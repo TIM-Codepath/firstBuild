@@ -452,12 +452,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LMN-sm-iwf">
-                        <barButtonItem key="leftBarButtonItem" title="Logout" id="L6L-AP-bTr">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" image="gearshape.fill" catalog="system" id="3i3-Iu-rjO">
                             <connections>
-                                <action selector="onLogoutButton:" destination="KXu-C8-3aa" id="mBi-0A-IkI"/>
+                                <segue destination="FU6-k5-ZEw" kind="show" id="j66-kN-Ehg"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Settings" image="gearshape.fill" catalog="system" id="3i3-Iu-rjO"/>
                     </navigationItem>
                     <connections>
                         <outlet property="bioLabel" destination="wMJ-pT-n3v" id="PSF-pt-N12"/>
@@ -471,6 +470,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nQM-ND-BCo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1710" y="123"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="g6E-WC-AFK">
+            <objects>
+                <viewController id="FU6-k5-ZEw" customClass="SettingsViewController" customModule="TimeMatters" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BWD-Jg-0kj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UWA-qt-Fpz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rnz-JJ-jmx">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Dark Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cd-Ly-kty">
+                                                <rect key="frame" x="30" y="15" width="305" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fq8-TZ-a9g">
+                                                <rect key="frame" x="335" y="9.5" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="GQX-rZ-CeH"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="0.0" left="30" bottom="0.0" right="30"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zQe-GI-sU2">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FmE-Kn-KCd">
+                                                <rect key="frame" x="30" y="10" width="354" height="30"/>
+                                                <state key="normal" title="Logout"/>
+                                                <connections>
+                                                    <action selector="onLogoutButton:" destination="FU6-k5-ZEw" eventType="touchUpInside" id="eZe-15-cj9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Wzx-Gm-mat"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="0.0" left="30" bottom="0.0" right="30"/>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQj-n7-9Ws">
+                                        <rect key="frame" x="0.0" y="100" width="414" height="674"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="p8h-oF-803"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UWA-qt-Fpz" firstAttribute="top" secondItem="p8h-oF-803" secondAttribute="top" id="5PK-eJ-y0G"/>
+                            <constraint firstItem="p8h-oF-803" firstAttribute="bottom" secondItem="UWA-qt-Fpz" secondAttribute="bottom" id="FEZ-tQ-OLV"/>
+                            <constraint firstItem="UWA-qt-Fpz" firstAttribute="leading" secondItem="p8h-oF-803" secondAttribute="leading" id="Zgz-LP-JKu"/>
+                            <constraint firstItem="p8h-oF-803" firstAttribute="trailing" secondItem="UWA-qt-Fpz" secondAttribute="trailing" id="knx-TG-6iP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="w5Y-dg-9mI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gcf-2J-QqV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2598.5507246376815" y="122.54464285714285"/>
         </scene>
         <!--Edit Profile-->
         <scene sceneID="q5d-cj-xnE">
