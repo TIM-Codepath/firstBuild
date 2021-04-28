@@ -453,6 +453,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="LMN-sm-iwf">
                         <barButtonItem key="rightBarButtonItem" title="Settings" image="gearshape.fill" catalog="system" id="3i3-Iu-rjO">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="FU6-k5-ZEw" kind="show" id="j66-kN-Ehg"/>
                             </connections>
@@ -471,7 +472,7 @@
             </objects>
             <point key="canvasLocation" x="1710" y="123"/>
         </scene>
-        <!--Settings View Controller-->
+        <!--Settings-->
         <scene sceneID="g6E-WC-AFK">
             <objects>
                 <viewController id="FU6-k5-ZEw" customClass="SettingsViewController" customModule="TimeMatters" customModuleProvider="target" sceneMemberID="viewController">
@@ -485,14 +486,17 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rnz-JJ-jmx">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enable Dark Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cd-Ly-kty">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dark Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cd-Ly-kty">
                                                 <rect key="frame" x="30" y="15" width="305" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fq8-TZ-a9g">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fq8-TZ-a9g">
                                                 <rect key="frame" x="335" y="9.5" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="onSwitchButton:" destination="FU6-k5-ZEw" eventType="valueChanged" id="GT8-jM-fYH"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                         <constraints>
@@ -503,8 +507,9 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="zQe-GI-sU2">
                                         <rect key="frame" x="0.0" y="50" width="414" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FmE-Kn-KCd">
-                                                <rect key="frame" x="30" y="10" width="354" height="30"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FmE-Kn-KCd">
+                                                <rect key="frame" x="30" y="8.5" width="354" height="33"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="Logout"/>
                                                 <connections>
                                                     <action selector="onLogoutButton:" destination="FU6-k5-ZEw" eventType="touchUpInside" id="eZe-15-cj9"/>
@@ -532,7 +537,10 @@
                             <constraint firstItem="p8h-oF-803" firstAttribute="trailing" secondItem="UWA-qt-Fpz" secondAttribute="trailing" id="knx-TG-6iP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="w5Y-dg-9mI"/>
+                    <navigationItem key="navigationItem" title="Settings" id="w5Y-dg-9mI"/>
+                    <connections>
+                        <outlet property="darkModeSwitch" destination="Fq8-TZ-a9g" id="CZf-lM-72m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gcf-2J-QqV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
