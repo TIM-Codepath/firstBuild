@@ -10,11 +10,34 @@ import Parse
 
 class SettingsViewController: UIViewController {
 
+    
+@IBOutlet weak var darkModeSwitch: UISwitch!
+    
+    private var darkMode: Bool = false {
+        didSet {
+            overrideUserInterfaceStyle = self.darkMode ? .dark : .light
+        }
+    }
+    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
+        
+        darkMode = HelperFunctions.getDarkMode()
+        
+        darkModeSwitch.isOn = darkMode
+        
+        darkModeSwitch.addTarget(self, action: #selector(SettingsViewController.onSwitchButton(_:)), for: .valueChanged)
+        
+       
+        darkModeSwitch.onTintColor = .systemBlue
+    }
+    
 
         // Do any additional setup after loading the view.
+    
+    
+    @objc func onSwitchButton(_ nightSwitch: UISwitch) {
+        self.darkMode = nightSwitch.isOn
     }
     
     
@@ -33,6 +56,7 @@ class SettingsViewController: UIViewController {
                   }
     }
     
+
     /*
     // MARK: - Navigation
 

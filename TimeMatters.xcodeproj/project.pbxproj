@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F36030A263795B80019743F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F360309263795B80019743F /* SettingsViewController.swift */; };
+		0F3603152637E6E70019743F /* HelperFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F3603142637E6E70019743F /* HelperFunctions.swift */; };
 		0FD14874262F763800641420 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD14873262F763800641420 /* CalendarViewController.swift */; };
 		0FD390DC262E6C9C008C2CBC /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD390DB262E6C9C008C2CBC /* EditProfileViewController.swift */; };
 		6EE3FF31DD3CA073F7915499 /* Pods_TimeMattersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B8B3A68390EADD4C7863E0 /* Pods_TimeMattersTests.framework */; };
@@ -56,6 +57,7 @@
 
 /* Begin PBXFileReference section */
 		0F360309263795B80019743F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0F3603142637E6E70019743F /* HelperFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperFunctions.swift; sourceTree = "<group>"; };
 		0FD14873262F763800641420 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		0FD390DB262E6C9C008C2CBC /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		1A747ACCA846DE66A2E7AB71 /* Pods-TimeMattersTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMattersTests.debug.xcconfig"; path = "Target Support Files/Pods-TimeMattersTests/Pods-TimeMattersTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				E65243592616E5E000270A4F /* LaunchScreen.storyboard */,
 				E652435C2616E5E000270A4F /* Info.plist */,
 				0F360309263795B80019743F /* SettingsViewController.swift */,
+				0F3603142637E6E70019743F /* HelperFunctions.swift */,
 			);
 			path = TimeMatters;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				0FD14874262F763800641420 /* CalendarViewController.swift in Sources */,
 				D701D72426311FC600A77131 /* TimeLoggingViewController.swift in Sources */,
 				B780C9C32628660E007FB78A /* TimeLoggingVM.swift in Sources */,
+				0F3603152637E6E70019743F /* HelperFunctions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
