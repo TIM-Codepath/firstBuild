@@ -17,51 +17,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EsE-gv-SVU" customClass="Calendar">
-                                <rect key="frame" x="0.0" y="44" width="414" height="361"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uXK-Ej-MjM" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
+                                <rect key="frame" x="0.0" y="44" width="414" height="360"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="361" id="SJE-f1-f5l"/>
+                                    <constraint firstAttribute="height" constant="360" id="mTM-Hk-nSa"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ay1-h8-VWT">
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="cco-uJ-BD5">
                                     <size key="itemSize" width="128" height="128"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CalendarViewCell" id="nxg-ND-Ntt">
-                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dateCell" id="Q7i-9S-KZ4" customClass="DateCell" customModule="TimeMatters" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wTN-9d-fGa">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Qaz-Lu-Efc">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06j-uj-Qrc">
-                                                    <rect key="frame" x="43" y="53.5" width="42" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dateHere" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ll-lR-pTH">
+                                                    <rect key="frame" x="29" y="53.5" width="70.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="06j-uj-Qrc" firstAttribute="centerX" secondItem="wTN-9d-fGa" secondAttribute="centerX" id="9eM-Er-Qj0"/>
-                                                <constraint firstItem="06j-uj-Qrc" firstAttribute="centerY" secondItem="wTN-9d-fGa" secondAttribute="centerY" id="iFd-to-mQG"/>
+                                                <constraint firstItem="3ll-lR-pTH" firstAttribute="centerY" secondItem="Qaz-Lu-Efc" secondAttribute="centerY" id="MbR-XV-wi5"/>
+                                                <constraint firstItem="3ll-lR-pTH" firstAttribute="centerX" secondItem="Qaz-Lu-Efc" secondAttribute="centerX" id="wNa-f5-Cep"/>
                                             </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="3ll-lR-pTH" id="4I7-rP-04g"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="DateHeader" id="GPA-SL-13m" customClass="DateHeader" customModule="TimeMatters" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="monthLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="392-ww-1hX">
+                                            <rect key="frame" x="162" y="14.5" width="90.5" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="392-ww-1hX" firstAttribute="centerY" secondItem="GPA-SL-13m" secondAttribute="centerY" id="2e7-x4-asD"/>
+                                        <constraint firstItem="392-ww-1hX" firstAttribute="centerX" secondItem="GPA-SL-13m" secondAttribute="centerX" id="pNb-Zp-xED"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="monthTitle" destination="392-ww-1hX" id="7Er-xK-4bk"/>
+                                    </connections>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="ibCalendarDataSource" destination="79j-8t-kHv" id="yZ3-3g-KB4"/>
+                                    <outlet property="ibCalendarDelegate" destination="79j-8t-kHv" id="X0P-nF-muu"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6N3-TK-Ce5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="EsE-gv-SVU" firstAttribute="trailing" secondItem="6N3-TK-Ce5" secondAttribute="trailing" id="R9U-TB-GEO"/>
-                            <constraint firstItem="EsE-gv-SVU" firstAttribute="leading" secondItem="6N3-TK-Ce5" secondAttribute="leading" id="RjN-rM-T0O"/>
-                            <constraint firstItem="EsE-gv-SVU" firstAttribute="top" secondItem="6N3-TK-Ce5" secondAttribute="top" id="UVZ-g7-cc2"/>
+                            <constraint firstItem="uXK-Ej-MjM" firstAttribute="leading" secondItem="6N3-TK-Ce5" secondAttribute="leading" id="pg5-50-fpK"/>
+                            <constraint firstItem="uXK-Ej-MjM" firstAttribute="top" secondItem="6N3-TK-Ce5" secondAttribute="top" id="t5g-L5-Fz1"/>
+                            <constraint firstItem="6N3-TK-Ce5" firstAttribute="trailing" secondItem="uXK-Ej-MjM" secondAttribute="trailing" id="ttU-PT-gQQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Calendar" id="yz3-jU-pId"/>
+                    <connections>
+                        <outlet property="calendarView" destination="uXK-Ej-MjM" id="Epa-oI-yoO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cjj-EC-0gY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
