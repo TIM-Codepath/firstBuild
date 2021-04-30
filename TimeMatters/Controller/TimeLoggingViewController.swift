@@ -14,6 +14,13 @@ class TimeLoggingViewController: UIViewController {
     @IBOutlet weak var secondLabel: UILabel!
     @IBOutlet weak var startStopBtn: UIButton!
     
+    @IBOutlet weak var currentPreset: UILabel!
+    @IBOutlet weak var prevPresetBtn: UIButton!
+    @IBOutlet weak var nextPresetBtn: UIButton!
+    
+    var presets:Array<String> = []
+    var presetIndex = 0
+    
     var timer = Timer()
     var isTimerActive = false;
     var timeElapsed = 0
@@ -27,6 +34,29 @@ class TimeLoggingViewController: UIViewController {
         startStopBtn.layer.cornerRadius = startStopBtn.bounds.width / 2
         
         initBarButton()
+        
+        presets = ["Study", "Work", "Exercise"] // TEMP
+        if !presets.isEmpty && presets[0] != "" {
+            setPreset()
+        }
+    }
+    
+    private func setPreset() {
+        currentPreset.text = presets[presetIndex]
+        
+        nextPresetBtn.isEnabled = presets.indices.contains(presetIndex+1);
+        prevPresetBtn.isEnabled = presets.indices.contains(presetIndex-1);
+
+    }
+    
+    @IBAction func decrementPreset(_ sender: Any) {
+        presetIndex -= 1
+        setPreset()
+    }
+    
+    @IBAction func incrementPreset(_ sender: Any) {
+        presetIndex += 1
+        setPreset()
     }
     
     func initBarButton() {
@@ -38,7 +68,9 @@ class TimeLoggingViewController: UIViewController {
     }
     
     @objc func clickAddPreset() {
-        print("clicked")
+        let storyboard: UIStoryboard = UIStoryboard(name: "TimeLoggingStoryboard", bundle:nil)
+        let view  = storyboard.instantiateViewController(withIdentifier: "presetViewController") as! PresetViewController
+        self.navigationController?.pushViewController(view, animated: true)
     }
     
     @IBAction func onStartStop(_ sender: Any) {
