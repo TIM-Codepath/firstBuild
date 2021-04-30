@@ -25,6 +25,7 @@
 		B7DB88FC263AC58000A0500A /* DateHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7DB88FB263AC58000A0500A /* DateHeader.swift */; };
 		D701D71F26311BDD00A77131 /* TimeLoggingStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D701D71E26311BDD00A77131 /* TimeLoggingStoryboard.storyboard */; };
 		D701D72426311FC600A77131 /* TimeLoggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D701D72326311FC600A77131 /* TimeLoggingViewController.swift */; };
+		D705FA3D263BB18100B4F4E5 /* PresetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D705FA3C263BB18100B4F4E5 /* PresetViewController.swift */; };
 		E645FD2D262BFDA600F63C5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E645FD2C262BFDA600F63C5E /* Main.storyboard */; };
 		E652434F2616E5DE00270A4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E652434E2616E5DE00270A4F /* AppDelegate.swift */; };
 		E65243512616E5DE00270A4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65243502616E5DE00270A4F /* SceneDelegate.swift */; };
@@ -83,6 +84,7 @@
 		D2BB791ABC6084BCF0E9413B /* Pods-TimeMatters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMatters.debug.xcconfig"; path = "Target Support Files/Pods-TimeMatters/Pods-TimeMatters.debug.xcconfig"; sourceTree = "<group>"; };
 		D701D71E26311BDD00A77131 /* TimeLoggingStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TimeLoggingStoryboard.storyboard; sourceTree = "<group>"; };
 		D701D72326311FC600A77131 /* TimeLoggingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeLoggingViewController.swift; sourceTree = "<group>"; };
+		D705FA3C263BB18100B4F4E5 /* PresetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetViewController.swift; sourceTree = "<group>"; };
 		E645FD2C262BFDA600F63C5E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E652434B2616E5DE00270A4F /* TimeMatters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeMatters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E652434E2616E5DE00270A4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				B7A12F3B26311705006AB227 /* SignUpViewController.swift */,
 				0FD14873262F763800641420 /* CalendarViewController.swift */,
 				D701D72326311FC600A77131 /* TimeLoggingViewController.swift */,
+				D705FA3C263BB18100B4F4E5 /* PresetViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -518,6 +521,7 @@
 				B780C9BE262865DA007FB78A /* ModeVM.swift in Sources */,
 				0F36030A263795B80019743F /* SettingsViewController.swift in Sources */,
 				E6E7F5E7262CB3FF00C9411F /* UAYearlyViewController.swift in Sources */,
+				D705FA3D263BB18100B4F4E5 /* PresetViewController.swift in Sources */,
 				0FD14874262F763800641420 /* CalendarViewController.swift in Sources */,
 				D701D72426311FC600A77131 /* TimeLoggingViewController.swift in Sources */,
 				B780C9C32628660E007FB78A /* TimeLoggingVM.swift in Sources */,
