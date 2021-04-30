@@ -21,31 +21,37 @@ class UADailyViewController: UIViewController, ChartViewDelegate {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
+        let xAxis = radarChart.xAxis
+        xAxis.valueFormatter = XAxisFormatter()
+        xAxis.labelFont = .systemFont(ofSize: 9, weight:.bold)
+        
+        
         radarChart.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.width)
         
         radarChart.center = view.center
         view.addSubview(radarChart)
         var entries = [RadarChartDataEntry]()
-        for x in 0..<24 {
+        for x in 0..<5 {
             entries.append(RadarChartDataEntry(value: Double(x), data: Double(x))
         )}
         let set = RadarChartDataSet(entries:entries)
-        
+
         set.colors = ChartColorTemplates.colorful()
         
         let data = RadarChartData(dataSet: set)
         radarChart.data = data
     }
     
+}
 
-    /*
-    // MARK: - Navigation
+class XAxisFormatter: IAxisValueFormatter
+{
+    //let titles = "ABCDEFGHI".map{ "Party\($0)"}
+    let titles1 = "Break"
+    let titles2 = "Study"
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+        //titles[Int(value) % titles.count]
+        titles1
     }
-    */
-
 }
