@@ -162,7 +162,7 @@
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tqr-Ue-2GB">
                                                 <rect key="frame" x="324" y="20.5" width="60" height="59"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="fbx-yy-w5k"/>
                                                     <constraint firstAttribute="width" constant="60" id="x8e-W5-H81"/>
@@ -453,7 +453,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="LMN-sm-iwf">
                         <barButtonItem key="rightBarButtonItem" title="Settings" image="gearshape.fill" catalog="system" id="3i3-Iu-rjO">
-                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="tintColor" systemColor="labelColor"/>
                             <connections>
                                 <segue destination="FU6-k5-ZEw" kind="show" id="j66-kN-Ehg"/>
                             </connections>
@@ -492,8 +492,9 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Fq8-TZ-a9g">
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fq8-TZ-a9g">
                                                 <rect key="frame" x="315" y="9.5" width="51" height="31"/>
+                                                <color key="tintColor" red="0.97647058819999999" green="0.61568627450000002" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                                 <connections>
                                                     <action selector="onSwitchButton:" destination="FU6-k5-ZEw" eventType="valueChanged" id="GT8-jM-fYH"/>
                                                 </connections>
@@ -588,7 +589,7 @@
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="2wC-zg-w4Y">
                                                 <rect key="frame" x="107" y="0.5" width="150" height="149"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="150" id="Px1-h5-Vsp"/>
                                                     <constraint firstAttribute="width" secondItem="2wC-zg-w4Y" secondAttribute="height" multiplier="1:1" id="jlB-Ed-ZkO"/>
