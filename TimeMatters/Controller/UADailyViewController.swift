@@ -39,7 +39,7 @@ class UADailyViewController: UIViewController, ChartViewDelegate {
         //xAxis.xOffset = 10
         xAxis.valueFormatter = XAxisFormatter()
         
-        //Radar Chart UI
+        //Radar Chart UI - 043021
         radarChart.webLineWidth = 1.5
         radarChart.innerWebLineWidth = 1.5
         radarChart.webColor = .lightGray
