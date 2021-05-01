@@ -216,3 +216,6 @@ return task
 ## User can change profile photo, name and bio
 ## Time logging feature
 <img src="http://g.recordit.co/q9ALh5DCYK.gif" width=300>
+
+## Build Progres Week 12
+<img src="http://g.recordit.co/CLnJ6VCuTM.gif" width=300>
