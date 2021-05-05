@@ -23,6 +23,7 @@ class CalendarViewController: UIViewController {
        guard let cell = view as? DateCell  else { return }
        cell.dateLabel.text = cellState.text
        handleCellTextColor(cell: cell, cellState: cellState)
+       handleCellSelected(cell: cell, cellState: cellState)
     }
         
     func handleCellTextColor(cell: DateCell, cellState: CellState) {
@@ -32,6 +33,13 @@ class CalendarViewController: UIViewController {
           cell.dateLabel.textColor = UIColor.gray
        }
     }
+    func handleCellSelected(cell: DateCell, cellState: CellState) {
+            if cellState.isSelected {
+           print("Selected")
+            } else {
+            
+            }
+    }
 }
 
 extension CalendarViewController: JTAppleCalendarViewDataSource {
@@ -39,7 +47,7 @@ extension CalendarViewController: JTAppleCalendarViewDataSource {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy MM dd"
         let startDate = formatter.date(from: "2018 01 01")!
-        let endDate = Date()
+        let endDate = formatter.date(from: "2050 12 31")!
         return ConfigurationParameters(startDate: startDate, endDate: endDate)
     }
 }
@@ -54,10 +62,18 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
     func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
        configureCell(view: cell, cellState: cellState)
     }
+    func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
+        configureCell(view: cell, cellState: cellState)
+    }
+
+    func calendar(_ calendar: JTAppleCalendarView, didDeselectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
+        configureCell(view: cell, cellState: cellState)
+    }
+    
     
     func calendar(_ calendar: JTAppleCalendarView, headerViewForDateRange range: (start: Date, end: Date), at indexPath: IndexPath) -> JTAppleCollectionReusableView {
         let formatter = DateFormatter()  // Declare this outside, to avoid instancing this heavy class multiple times.
-        formatter.dateFormat = "YYYY / MMM"
+        formatter.dateFormat = "MMM YYYY"
         
         let header = calendar.dequeueReusableJTAppleSupplementaryView(withReuseIdentifier: "DateHeader", for: indexPath) as! DateHeader
         header.monthTitle.text = formatter.string(from: range.start)
