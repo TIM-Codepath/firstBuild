@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 class TimeLoggingViewController: UIViewController {
     
@@ -19,6 +20,7 @@ class TimeLoggingViewController: UIViewController {
     @IBOutlet weak var nextPresetBtn: UIButton!
     
     var presets:Array<String> = []
+    var timeLogs: [String: [Int]] = [:]
     var presetIndex = 0
     
     var timer = Timer()
@@ -26,6 +28,8 @@ class TimeLoggingViewController: UIViewController {
     var timeElapsed = 0
     
     var (hours, minutes, seconds) = (0,0,0)
+    
+    let user = PFUser.current()!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +39,21 @@ class TimeLoggingViewController: UIViewController {
         
         initBarButton()
         
-        presets = ["Study", "Work", "Exercise"] // TEMP
-        if !presets.isEmpty && presets[0] != "" {
+        timeLogs = (user["logs"] != nil) ? user["logs"] as! [String : [Int]] : [:]
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        presetIndex = 0
+        presets = (user["presets"] != nil) ? user["presets"] as! Array<String> : []
+        
+        if !presets.isEmpty {
+            startStopBtn.isHidden = false
             setPreset()
+        } else {
+            currentPreset.text = "No Presets"
+            nextPresetBtn.isEnabled = false
+            prevPresetBtn.isEnabled = false
+            startStopBtn.isHidden = true
         }
     }
     
@@ -61,7 +77,7 @@ class TimeLoggingViewController: UIViewController {
     
     func initBarButton() {
         let button = UIButton(type: .system)
-        button.setTitle("Add Preset", for: .normal)
+        button.setTitle("Manage Presets", for: .normal)
         button.titleLabel?.font = button.titleLabel?.font.withSize(17)
         button.addTarget(self, action: #selector(clickAddPreset), for: .touchUpInside)
         self.navigationItem.setRightBarButton(UIBarButtonItem(customView: button), animated: true)
@@ -99,7 +115,12 @@ class TimeLoggingViewController: UIViewController {
         secondLabel.text = "00"
         
         // Save the time elapsed to database
-        print(timeElapsed) // TEMP
+        if timeLogs[currentPreset.text!] == nil {
+            timeLogs[currentPreset.text!] = []
+        }
+        timeLogs[currentPreset.text!]!.append(timeElapsed)
+        user["logs"] = timeLogs
+        user.saveInBackground()
         timeElapsed = 0
     }
     

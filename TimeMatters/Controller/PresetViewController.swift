@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 class PresetViewController: UIViewController, UITableViewDataSource {
     
@@ -14,14 +15,36 @@ class PresetViewController: UIViewController, UITableViewDataSource {
     
     var presets:Array<String> = []
     
+    let user = PFUser.current()!;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         
-        presets = ["Study", "Work", "Exercise"] // TEMP
+        presets = (user["presets"] != nil) ? user["presets"] as! Array<String> : []
         
         navigationItem.title = "Presets"
-        navigationItem.rightBarButtonItem = self.editButtonItem
+        navigationItem.leftBarButtonItem = self.editButtonItem
+        navigationItem.rightBarButtonItems = [UIBarButtonItem(title: "Save", style: .done, target: self, action: #selector(goBack)), UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(goBackWithNoSave))]
+    }
+    
+    @objc func goBackWithNoSave() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func goBack() {
+        self.user["presets"] = self.presets
+        user.saveInBackground { (success, error) in
+            if success {
+                self.navigationController?.popViewController(animated: true)
+            } else {
+                let alert = UIAlertController(title: "Something went wrong", message: "The preset could not be saved", preferredStyle: .alert)
+                let action = UIAlertAction(title: "Dismiss", style: .default) { (action) in}
+                self.present(alert, animated: true, completion: nil)
+                alert.addAction(action)
+                print("Error: \(String(describing: error?.localizedDescription))")
+            }
+        }
     }
     
     override func setEditing(_ editing: Bool, animated: Bool) {
