@@ -7,10 +7,13 @@
 
 import UIKit
 import Charts
+import Parse
 
 class UADailyViewController: UIViewController, ChartViewDelegate {
     
     var radarChart = RadarChartView()
+    let user = PFUser.current()!
+    var presets:Array<String> = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,9 +96,12 @@ class UADailyViewController: UIViewController, ChartViewDelegate {
 
 class XAxisFormatter: IAxisValueFormatter
 {
+//    let user = PFUser.current()!
+//    var presets:Array<String> = []
     //let titles = "ABCDEFGHI".map{ "Party\($0)"}
     //let titles1 = "Break"
     let titles = ["Study","Break","Exercise", "Work", "School"]
+//    presets = (user["presets"] != nil) ? user["presets"] as! Array<String> : []
 
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
         //titles[Int(value) % titles.count]
