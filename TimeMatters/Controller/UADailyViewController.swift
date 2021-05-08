@@ -13,25 +13,24 @@ class UADailyViewController: UIViewController, ChartViewDelegate {
     
     var radarChart = RadarChartView()
     let user = PFUser.current()!
+    lazy var presets = (user["presets"] != nil) ? user["presets"] as! Array<String> : []
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         radarChart.delegate = self
         // Do any additional setup after loading the view.
-        
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
         //To retrieve an object
-        var presets = (user["presets"] != nil) ? user["presets"] as! Array<String> : []
         
-        print(presets)
-
+        print(presets.count)
         
         //input data management
-        let cnt = 5
+        let cnt = presets.count
         let block: (Int) -> RadarChartDataEntry = {_ in return
             RadarChartDataEntry(value: Double(arc4random_uniform(24/3)))
         }
@@ -104,13 +103,14 @@ class XAxisFormatter: IAxisValueFormatter
 //    let user = PFUser.current()!
     //let titles = "ABCDEFGHI".map{ "Party\($0)"}
     //let titles1 = "Break"
-    let titles = ["Study","Break","Exercise", "Work", "School"]
-    
+    //let titles = ["Study","Break","Exercise", "Work", "School"]
+    let data = UADailyViewController()
+    lazy var titles1 = data.presets
     
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
         //titles[Int(value) % titles.count]
         //titles1
-        titles[Int(value) % titles.count]
+        titles1[Int(value) % titles1.count]
     }
 }
 
