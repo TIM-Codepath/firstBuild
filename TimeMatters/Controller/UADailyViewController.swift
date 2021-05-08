@@ -13,16 +13,22 @@ class UADailyViewController: UIViewController, ChartViewDelegate {
     
     var radarChart = RadarChartView()
     let user = PFUser.current()!
-    var presets:Array<String> = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         radarChart.delegate = self
         // Do any additional setup after loading the view.
+        
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
+        //To retrieve an object
+        var presets = (user["presets"] != nil) ? user["presets"] as! Array<String> : []
+        
+        print(presets)
+
         
         //input data management
         let cnt = 5
@@ -35,7 +41,6 @@ class UADailyViewController: UIViewController, ChartViewDelegate {
         
         //xAxis of RadarChart
         let xAxis = radarChart.xAxis
-        xAxis.valueFormatter = XAxisFormatter()
         xAxis.labelFont = .systemFont(ofSize: 9, weight:.bold)
         xAxis.labelTextColor = .lightGray
         xAxis.xOffset = 10
@@ -97,12 +102,11 @@ class UADailyViewController: UIViewController, ChartViewDelegate {
 class XAxisFormatter: IAxisValueFormatter
 {
 //    let user = PFUser.current()!
-//    var presets:Array<String> = []
     //let titles = "ABCDEFGHI".map{ "Party\($0)"}
     //let titles1 = "Break"
     let titles = ["Study","Break","Exercise", "Work", "School"]
-//    presets = (user["presets"] != nil) ? user["presets"] as! Array<String> : []
-
+    
+    
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
         //titles[Int(value) % titles.count]
         //titles1
