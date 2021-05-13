@@ -7,16 +7,47 @@
 
 import UIKit
 import JTAppleCalendar
+import Parse
 
-class CalendarViewController: UIViewController {
+class CalendarViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CalendarDelegate {
     @IBOutlet weak var calendarView: JTAppleCalendarView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var tasks = [PFObject]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        initBarButton()
+        tableView.delegate = self
+        tableView.dataSource = self
         calendarView.scrollDirection = .horizontal
         calendarView.scrollingMode = .stopAtEachCalendarFrame
         calendarView.showsHorizontalScrollIndicator = false
         calendarView.showsVerticalScrollIndicator = false
+        calendarView.selectDates([Date()])
         self.calendarView.scrollToDate(Date(), triggerScrollToDateDelegate: true, animateScroll: false, preferredScrollPosition: .right, extraAddedOffset: 0, completionHandler: nil)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        getTasks()
+    }
+    
+    func initBarButton() {
+        let button = UIButton(type: .system)
+        button.setTitle("Add Task", for: .normal)
+        button.titleLabel?.font = button.titleLabel?.font.withSize(17)
+        button.addTarget(self, action: #selector(clickAddTask), for: .touchUpInside)
+        self.navigationItem.setRightBarButton(UIBarButtonItem(customView: button), animated: true)
+    }
+    
+    @objc func clickAddTask() {
+        let storyboard: UIStoryboard = UIStoryboard(name: "ProductivityStoryboard", bundle:nil)
+        let view  = storyboard.instantiateViewController(withIdentifier: "calendarPopUp") as! CalendarPopUpViewController
+        view.date = calendarView.selectedDates[0].description
+        view.delegate = self
+        view.modalPresentationStyle = .overFullScreen
+        self.present(view, animated: false, completion: nil)
     }
     
     func configureCell(view: JTAppleCell?, cellState: CellState) {
@@ -33,12 +64,41 @@ class CalendarViewController: UIViewController {
           cell.dateLabel.textColor = UIColor.gray
        }
     }
+    
     func handleCellSelected(cell: DateCell, cellState: CellState) {
-            if cellState.isSelected {
-           print("Selected")
-            } else {
-            
+        if cellState.isSelected {
+            cell.selectedView.layer.cornerRadius =  14
+            cell.selectedView.isHidden = false
+            getTasks()
+        } else {
+            cell.selectedView.isHidden = true
+        }
+    }
+    
+    func getTasks() {
+        let query = PFQuery(className: "CalendarTask")
+        query.includeKeys(["task_name"])
+        query.whereKey("username", contains: PFUser.current()?.username)
+        query.whereKey("date", contains: calendarView.selectedDates[0].description)
+        query.findObjectsInBackground { (tasks, error) in
+            if tasks != nil {
+                self.tasks = tasks!
+                self.tableView.reloadData()
             }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tasks.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let task = tasks[indexPath.row]
+        let cell = UITableViewCell()
+        if let taskName = task["task_name"] as? String {
+            cell.textLabel?.text = taskName
+        }
+        return cell
     }
 }
 
@@ -83,4 +143,8 @@ extension CalendarViewController: JTAppleCalendarViewDelegate {
     func calendarSizeForMonths(_ calendar: JTAppleCalendarView?) -> MonthSize? {
         return MonthSize(defaultSize: 50)
     }
+}
+
+protocol CalendarDelegate {
+    func getTasks()
 }

@@ -13,6 +13,7 @@
 		0FD390DC262E6C9C008C2CBC /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD390DB262E6C9C008C2CBC /* EditProfileViewController.swift */; };
 		6EE3FF31DD3CA073F7915499 /* Pods_TimeMattersTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41B8B3A68390EADD4C7863E0 /* Pods_TimeMattersTests.framework */; };
 		81721B5416A784A20236BA28 /* Pods_TimeMatters.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2C35188D83F2B33D85B2BFB /* Pods_TimeMatters.framework */; };
+		B74FDF67264DA949009B0489 /* CalendarPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74FDF66264DA949009B0489 /* CalendarPopUpViewController.swift */; };
 		B780C9B426286557007FB78A /* UserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780C9B326286557007FB78A /* UserVM.swift */; };
 		B780C9B926286580007FB78A /* ActivityVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780C9B826286580007FB78A /* ActivityVM.swift */; };
 		B780C9BE262865DA007FB78A /* ModeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B780C9BD262865DA007FB78A /* ModeVM.swift */; };
@@ -70,6 +71,7 @@
 		77FC334C3CF1355A210FDFF2 /* Pods-TimeMattersTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMattersTests.release.xcconfig"; path = "Target Support Files/Pods-TimeMattersTests/Pods-TimeMattersTests.release.xcconfig"; sourceTree = "<group>"; };
 		AAEE82F6F5B1936CD09C6C36 /* Pods-TimeMatters-TimeMattersUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMatters-TimeMattersUITests.release.xcconfig"; path = "Target Support Files/Pods-TimeMatters-TimeMattersUITests/Pods-TimeMatters-TimeMattersUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AEE015319122CD83F6796941 /* Pods-TimeMatters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeMatters.release.xcconfig"; path = "Target Support Files/Pods-TimeMatters/Pods-TimeMatters.release.xcconfig"; sourceTree = "<group>"; };
+		B74FDF66264DA949009B0489 /* CalendarPopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPopUpViewController.swift; sourceTree = "<group>"; };
 		B780C9B326286557007FB78A /* UserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserVM.swift; path = TimeMatters/Model/UserVM.swift; sourceTree = SOURCE_ROOT; };
 		B780C9B826286580007FB78A /* ActivityVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ActivityVM.swift; path = TimeMatters/Model/ActivityVM.swift; sourceTree = SOURCE_ROOT; };
 		B780C9BD262865DA007FB78A /* ModeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ModeVM.swift; path = TimeMatters/Model/ModeVM.swift; sourceTree = SOURCE_ROOT; };
@@ -259,6 +261,7 @@
 				0FD14873262F763800641420 /* CalendarViewController.swift */,
 				D701D72326311FC600A77131 /* TimeLoggingViewController.swift */,
 				D705FA3C263BB18100B4F4E5 /* PresetViewController.swift */,
+				B74FDF66264DA949009B0489 /* CalendarPopUpViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FD390DC262E6C9C008C2CBC /* EditProfileViewController.swift in Sources */,
+				B74FDF67264DA949009B0489 /* CalendarPopUpViewController.swift in Sources */,
 				B7DB88F7263AC1EA00A0500A /* DateCell.swift in Sources */,
 				E67B5A8E2622B50B00CAB258 /* LoginViewController.swift in Sources */,
 				B780C9B426286557007FB78A /* UserVM.swift in Sources */,
