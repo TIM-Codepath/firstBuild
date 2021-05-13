@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="uXK-Ej-MjM" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
-                                <rect key="frame" x="0.0" y="44" width="414" height="360"/>
+                                <rect key="frame" x="0.0" y="74" width="414" height="360"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="360" id="mTM-Hk-nSa"/>
@@ -142,7 +142,7 @@
                                 </connections>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="M93-bc-uZF">
-                                <rect key="frame" x="0.0" y="414" width="414" height="448"/>
+                                <rect key="frame" x="0.0" y="444" width="414" height="418"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="L0B-f9-h52">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="29"/>
@@ -156,7 +156,7 @@
                                         </subviews>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dN0-y6-5It">
-                                        <rect key="frame" x="0.0" y="44" width="414" height="404"/>
+                                        <rect key="frame" x="0.0" y="44" width="414" height="374"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
@@ -169,7 +169,7 @@
                             <constraint firstItem="6N3-TK-Ce5" firstAttribute="bottom" secondItem="M93-bc-uZF" secondAttribute="bottom" id="BW1-B4-Ztk"/>
                             <constraint firstItem="M93-bc-uZF" firstAttribute="top" secondItem="uXK-Ej-MjM" secondAttribute="bottom" constant="10" id="b99-2Y-2vh"/>
                             <constraint firstItem="uXK-Ej-MjM" firstAttribute="leading" secondItem="6N3-TK-Ce5" secondAttribute="leading" id="pg5-50-fpK"/>
-                            <constraint firstItem="uXK-Ej-MjM" firstAttribute="top" secondItem="6N3-TK-Ce5" secondAttribute="top" id="t5g-L5-Fz1"/>
+                            <constraint firstItem="uXK-Ej-MjM" firstAttribute="top" secondItem="6N3-TK-Ce5" secondAttribute="top" constant="30" id="t5g-L5-Fz1"/>
                             <constraint firstItem="6N3-TK-Ce5" firstAttribute="trailing" secondItem="uXK-Ej-MjM" secondAttribute="trailing" id="ttU-PT-gQQ"/>
                             <constraint firstAttribute="trailing" secondItem="M93-bc-uZF" secondAttribute="trailing" id="ub7-Wd-xTe"/>
                         </constraints>
