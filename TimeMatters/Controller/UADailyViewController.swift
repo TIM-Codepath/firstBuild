@@ -91,6 +91,11 @@ class UADailyViewController: UIViewController, ChartViewDelegate {
             RadarChartDataEntry(value: Double(self.grabDataFromParse()))
         }
         
+//        //for demo 051421
+//        var todayDataBlock: (Int) -> RadarChartDataEntry = {_ in return
+//            RadarChartDataEntry(value: Double(arc4random_uniform(24/3)))
+//        }
+        
         //daily reset of today's data to 0.
         UserDefaults.standard.set(false, forKey: "didLaunchBefore")
         if UserDefaults.standard.bool(forKey: "didLaunchBefore") == false{
@@ -112,7 +117,7 @@ class UADailyViewController: UIViewController, ChartViewDelegate {
                         let tomorrow = DateComponents(year: now.year, month: now.month, day: now.day! + 1, hour: now.hour, minute: now.minute, second: now.second)
                         let date = Calendar.current.date(from: tomorrow)
                         UserDefaults.standard.set(date, forKey: "tomorrow")
-                        //reset values here
+                        //reset values
                         yesterdayDataBlock = todayDataBlock
                         user["logs"] = nil
                         user.saveInBackground()
@@ -180,8 +185,9 @@ class UADailyViewController: UIViewController, ChartViewDelegate {
 //        let testSet = RadarChartDataSet(entries: entries2, label: "Today")
 //        yesterdaySet.colors = ChartColorTemplates.liberty()
 //        todaySet.colors = ChartColorTemplates.colorful()
-
-        let data = RadarChartData(dataSets: [yesterdaySet, todaySet])
+//        let data = RadarChartData(dataSets: [yesterdaySet, todaySet])
+        
+        let data = RadarChartData(dataSets: [todaySet])
         radarChart.data = data
     }
     
