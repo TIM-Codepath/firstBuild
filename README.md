@@ -31,18 +31,19 @@ TIM is the destination for productive life. On TIM, daily personal time spending
 - [X] User stays logged in across restarts
 - [X] User can logout
 - [X] Styled Launch Screen and App Icon
-- [ ] User can import/create weekly schedule 
+- [X] User can add tasks on the calendar view 
 - [X] User can select preset (study mode/breaktime/exercise...etc).
-- [ ] App generates daily report based on these data. (See [https://cocoapods.org/pods/Charts](https://cocoapods.org/pods/Charts))
+- [X] App generates daily report based on these data. (See [https://cocoapods.org/pods/Charts](https://cocoapods.org/pods/Charts))
 - [X] Profile page for user.
-- [ ] Settings to configure app options (Accesibility, Notification, General...etc).
-- [ ] Calendar feature. (See [https://cocoapods.org/pods/JTAppleCalendar](https://cocoapods.org/pods/JTAppleCalendar))
+- [X] Settings to configure app options (Accesibility, Notification, General...etc).
+- [X] Calendar feature. (See [https://cocoapods.org/pods/JTAppleCalendar](https://cocoapods.org/pods/JTAppleCalendar))
 
 **Optional Nice-to-have Stories**
 
 - [ ] When user uses cell phone, time is recorded.
 - [ ] Intuitive UI/UX to minimize user's interaction with app and still be able to generate accurate analysis on user's daily productivity.
 - [ ] Gamified personal statistics on each activity.
+- [ ] User can change password in the settings confifurations
 
 ### 2. Screen Archetypes
 
