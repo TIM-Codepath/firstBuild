@@ -223,3 +223,6 @@ return task
 
 ## Build Progress Week 12
 <img src="http://g.recordit.co/CLnJ6VCuTM.gif" width=300>
+
+## User can select a date and add a task for that date on the calendar view
+<img src="http://g.recordit.co/s5EjdgN8LK.gif" width=300>
