@@ -14,6 +14,10 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var passwordField: UITextField!
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     @IBAction func onSignUp(_ sender: Any) {
         
         let signUpViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "signUpViewController") as SignUpViewController
@@ -47,4 +51,6 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    
 }
