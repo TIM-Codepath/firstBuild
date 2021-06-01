@@ -105,6 +105,53 @@ class TimeLoggingViewController: UIViewController {
     
     func start() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(TimeLoggingViewController.keepTimer), userInfo: nil, repeats: true)
+        
+        /**
+         * TODO:
+         * 1. it is ideal to have reset function in the UADailyVC.
+         * 2. this test block is placed here to see if it is necessary to create  variables in database such as now, tomorrow, etc.
+         * 3. 053121 confirmed that Date is : 2021-06-01 06:06:27 +0000 so check to see if reset occurs after 0601 7am?
+         * 4. if #3 does not happen, we might have to create variables in database.
+         */
+        //daily reset of today's data to 0.
+        if timeLogs[currentPreset.text!] != nil
+        {
+            UserDefaults.standard.set(false, forKey: "didLaunchBefore")
+        }
+        if UserDefaults.standard.bool(forKey: "didLaunchBefore") == false
+        {
+            //only runs the first time your app is launched
+            UserDefaults.standard.set(true, forKey: "didLaunchBefore")
+            //sets the initial value for tomorrow
+            let now = Calendar.current.dateComponents(in: .current, from: Date())
+            print("today is : \(now)")
+            let tomorrow = DateComponents(year: now.year, month: now.month, day: now.day! + 1, hour: now.hour, minute: now.minute, second: now.second)
+            print("tomorrow is : \(tomorrow)")
+            let date = Calendar.current.date(from: tomorrow)
+            UserDefaults.standard.set(date, forKey: "tomorrow")
+            print("Date is : \(Date())")
+        }
+        if UserDefaults.standard.object(forKey: "tomorrow") != nil
+        {
+            //makes sure tomorrow is not nil
+            if Date() > UserDefaults.standard.object(forKey: "tomorrow") as! Date
+            {// if todays date is after(greater than) the 24 hour period you set last time you reset your values this will run
+                // reseting "tomorrow" to the actual tomorrow
+                let now = Calendar.current.dateComponents(in: .current, from: Date())
+                let tomorrow = DateComponents(year: now.year, month: now.month, day: now.day! + 1, hour: now.hour, minute: now.minute, second: now.second)
+                let date = Calendar.current.date(from: tomorrow)
+                UserDefaults.standard.set(date, forKey: "tomorrow")
+                print("today is : \(now) but it is yesterday now")
+                print("tomorrow is : \(tomorrow) but it is the day after tomorrow")
+                print("Date is : \(Date()) and it is the deciding factor")
+
+                //reset values
+                timeElapsed = 0
+                timeLogs[currentPreset.text!]!.append(timeElapsed)
+                user["logs"] = timeLogs
+                user.saveInBackground()
+            }
+        }
     }
     
     func stop() {

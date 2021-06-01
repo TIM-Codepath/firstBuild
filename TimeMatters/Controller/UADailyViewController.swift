@@ -21,6 +21,7 @@ class UADailyViewController: UIViewController, ChartViewDelegate {
         super.viewDidLoad()
         radarChart.delegate = self
         // Do any additional setup after loading the view.
+    
     }
     
 //    func secondsToHours (timeValPair : Int) -> (Int) {
@@ -97,32 +98,32 @@ class UADailyViewController: UIViewController, ChartViewDelegate {
 //        }
         
         //daily reset of today's data to 0.
-        UserDefaults.standard.set(false, forKey: "didLaunchBefore")
-        if UserDefaults.standard.bool(forKey: "didLaunchBefore") == false{
-          //only runs the first time your app is launched
-                    UserDefaults.standard.set(true, forKey: "didLaunchBefore")
-          //sets the initial value for tomorrow
-                    let now = Calendar.current.dateComponents(in: .current, from: Date())
-//            print("today is : \(now)")
-                    let tomorrow = DateComponents(year: now.year, month: now.month, day: now.day! + 1, hour: now.hour, minute: now.minute, second: now.second)
-//            print("tomorrow is : \(tomorrow)")
-                    let date = Calendar.current.date(from: tomorrow)
-                    UserDefaults.standard.set(date, forKey: "tomorrow")
-                }
-                if UserDefaults.standard.object(forKey: "tomorrow") != nil{
-                    //makes sure tomorrow is not nil
-                    if Date() > UserDefaults.standard.object(forKey: "tomorrow") as! Date {// if todays date is after(greater than) the 24 hour period you set last time you reset your values this will run
-          // reseting "tomorrow" to the actual tomorrow
-                        let now = Calendar.current.dateComponents(in: .current, from: Date())
-                        let tomorrow = DateComponents(year: now.year, month: now.month, day: now.day! + 1, hour: now.hour, minute: now.minute, second: now.second)
-                        let date = Calendar.current.date(from: tomorrow)
-                        UserDefaults.standard.set(date, forKey: "tomorrow")
-                        //reset values
-                        yesterdayDataBlock = todayDataBlock
-                        user["logs"] = nil
-                        user.saveInBackground()
-                    }
-                }
+//        UserDefaults.standard.set(false, forKey: "didLaunchBefore")
+//        if UserDefaults.standard.bool(forKey: "didLaunchBefore") == false{
+//          //only runs the first time your app is launched
+//                    UserDefaults.standard.set(true, forKey: "didLaunchBefore")
+//          //sets the initial value for tomorrow
+//                    let now = Calendar.current.dateComponents(in: .current, from: Date())
+////            print("today is : \(now)")
+//                    let tomorrow = DateComponents(year: now.year, month: now.month, day: now.day! + 1, hour: now.hour, minute: now.minute, second: now.second)
+////            print("tomorrow is : \(tomorrow)")
+//                    let date = Calendar.current.date(from: tomorrow)
+//                    UserDefaults.standard.set(date, forKey: "tomorrow")
+//                }
+//                if UserDefaults.standard.object(forKey: "tomorrow") != nil{
+//                    //makes sure tomorrow is not nil
+//                    if Date() > UserDefaults.standard.object(forKey: "tomorrow") as! Date {// if todays date is after(greater than) the 24 hour period you set last time you reset your values this will run
+//          // reseting "tomorrow" to the actual tomorrow
+//                        let now = Calendar.current.dateComponents(in: .current, from: Date())
+//                        let tomorrow = DateComponents(year: now.year, month: now.month, day: now.day! + 1, hour: now.hour, minute: now.minute, second: now.second)
+//                        let date = Calendar.current.date(from: tomorrow)
+//                        UserDefaults.standard.set(date, forKey: "tomorrow")
+//                        //reset values
+//                        yesterdayDataBlock = todayDataBlock
+//                        user["logs"] = nil
+//                        user.saveInBackground()
+//                    }
+//                }
 
         todayEntries = (0..<cnt).map(todayDataBlock)
         yesterdayEntries = (0..<cnt).map(yesterdayDataBlock)
