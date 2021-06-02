@@ -11,8 +11,10 @@ import Parse
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var usernameField: UITextField!
-    
     @IBOutlet weak var passwordField: UITextField!
+//    let user = PFUser.current()!
+//    let now = Calendar.current.dateComponents(in: .current, from: Date())
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -39,13 +41,13 @@ class LoginViewController: UIViewController {
             if user != nil {
                 self.performSegue(withIdentifier: "loginSeque", sender: nil)
             } else {
+                
                 self.present(alert, animated: true, completion: nil)
                 alert.addAction(action)
                 print("Error: \(String(describing: error?.localizedDescription))")
             }
             
         }
-        
     }
     
     override func viewDidLoad() {

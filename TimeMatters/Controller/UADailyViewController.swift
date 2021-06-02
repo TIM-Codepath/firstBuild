@@ -34,9 +34,34 @@ class UADailyViewController: UIViewController, ChartViewDelegate {
         let stampedTime = timeLogs["\(presetID)"] as? [Int] ?? [0]
         var timeValPair : Int = 0
         var timeValPairInSec : Int = 0
-        if(presetIndex < timeLogs.count)
+        
+        /**
+         TODO:
+         1. to see if i can reset values in TimeLog
+         1-1. confirmed that this block can reset values in the database
+         2. now that i confirmed the reset feature. I need to create a function that checks the time and reset its value after 12:00am.
+         2-1. create daily reset time as 12:00am in the data base when user logs in?
+         */
+//        UserDefaults.standard.set(false, forKey: "isDailyResetTimeUp")
+//        if UserDefaults.standard.bool(forKey: "isDailyResetTimeUp") == false
+//        {
+//            //resets the timeLogs in the database to 0
+////            UserDefaults.standard.set(true, forKey: "didLaunchBefore")
+//            timeLogs[presetID]?.removeAll()
+//            timeLogs[presetID]?.append(0)
+//            user["logs"] = timeLogs
+//            user.saveInBackground()
+//            print("deleted all data")
+//
+//        } else
+//        {
+//            //if it is not the reset time
+//
+//        }
+        
+        if(presetIndex < timeLogs.count && stampedTime.count > 1)
         {
-            timeValPair = stampedTime[0]
+            timeValPair = stampedTime[1]
         } else
         {
             timeValPair = 0
@@ -92,38 +117,49 @@ class UADailyViewController: UIViewController, ChartViewDelegate {
             RadarChartDataEntry(value: Double(self.grabDataFromParse()))
         }
         
-//        //for demo 051421
-//        var todayDataBlock: (Int) -> RadarChartDataEntry = {_ in return
-//            RadarChartDataEntry(value: Double(arc4random_uniform(24/3)))
-//        }
-        
+        /**
+         * TODO:
+         * 1. confirmed that it makes sense to create variables in the database.
+         */
         //daily reset of today's data to 0.
-//        UserDefaults.standard.set(false, forKey: "didLaunchBefore")
-//        if UserDefaults.standard.bool(forKey: "didLaunchBefore") == false{
-//          //only runs the first time your app is launched
-//                    UserDefaults.standard.set(true, forKey: "didLaunchBefore")
-//          //sets the initial value for tomorrow
-//                    let now = Calendar.current.dateComponents(in: .current, from: Date())
-////            print("today is : \(now)")
-//                    let tomorrow = DateComponents(year: now.year, month: now.month, day: now.day! + 1, hour: now.hour, minute: now.minute, second: now.second)
-////            print("tomorrow is : \(tomorrow)")
-//                    let date = Calendar.current.date(from: tomorrow)
-//                    UserDefaults.standard.set(date, forKey: "tomorrow")
-//                }
-//                if UserDefaults.standard.object(forKey: "tomorrow") != nil{
-//                    //makes sure tomorrow is not nil
-//                    if Date() > UserDefaults.standard.object(forKey: "tomorrow") as! Date {// if todays date is after(greater than) the 24 hour period you set last time you reset your values this will run
-//          // reseting "tomorrow" to the actual tomorrow
-//                        let now = Calendar.current.dateComponents(in: .current, from: Date())
-//                        let tomorrow = DateComponents(year: now.year, month: now.month, day: now.day! + 1, hour: now.hour, minute: now.minute, second: now.second)
-//                        let date = Calendar.current.date(from: tomorrow)
-//                        UserDefaults.standard.set(date, forKey: "tomorrow")
-//                        //reset values
-//                        yesterdayDataBlock = todayDataBlock
-//                        user["logs"] = nil
-//                        user.saveInBackground()
-//                    }
-//                }
+//        if timeLogs[currentPreset.text!] != nil
+//        {
+//            UserDefaults.standard.set(false, forKey: "didLaunchBefore")
+//        }
+//        if UserDefaults.standard.bool(forKey: "didLaunchBefore") == false
+//        {
+//            //only runs the first time your app is launched
+//            UserDefaults.standard.set(true, forKey: "didLaunchBefore")
+//            //sets the initial value for tomorrow
+//            let now = Calendar.current.dateComponents(in: .current, from: Date())
+//            print("today is : \(now)")
+//            let tomorrow = DateComponents(year: now.year, month: now.month, day: now.day! + 1, hour: now.hour, minute: now.minute, second: now.second)
+//            print("tomorrow is : \(tomorrow)")
+//            let date = Calendar.current.date(from: tomorrow)
+//            UserDefaults.standard.set(date, forKey: "tomorrow")
+//            print("Date is : \(Date())")
+//        }
+//        if UserDefaults.standard.object(forKey: "tomorrow") != nil
+//        {
+//            //makes sure tomorrow is not nil
+//            if Date() > UserDefaults.standard.object(forKey: "tomorrow") as! Date
+//            {// if todays date is after(greater than) the 24 hour period you set last time you reset your values this will run
+//                // reseting "tomorrow" to the actual tomorrow
+//                let now = Calendar.current.dateComponents(in: .current, from: Date())
+//                let tomorrow = DateComponents(year: now.year, month: now.month, day: now.day! + 1, hour: now.hour, minute: now.minute, second: now.second)
+//                let date = Calendar.current.date(from: tomorrow)
+//                UserDefaults.standard.set(date, forKey: "tomorrow")
+//                print("today is : \(now) but it is yesterday now")
+//                print("tomorrow is : \(tomorrow) but it is the day after tomorrow")
+//                print("Date is : \(Date()) and it is the deciding factor")
+//
+//                //reset values
+//                timeElapsed = 0
+//                timeLogs[currentPreset.text!]!.append(timeElapsed)
+//                user["logs"] = timeLogs
+//                user.saveInBackground()
+//            }
+//        }
 
         todayEntries = (0..<cnt).map(todayDataBlock)
         yesterdayEntries = (0..<cnt).map(yesterdayDataBlock)
